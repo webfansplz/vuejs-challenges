@@ -1,0 +1,13 @@
+{
+  "extends": "@webfansplz",
+  "rules":{
+    "no-console":0,
+    "prefer-const":0,
+    "quotes":[1,"double"],
+    "no-prototype-builtins":0,
+    "vue/no-multiple-template-root":0,
+   "vue/no-parsing-error": ["error", {
+     "invalid-first-character-of-tag-name": false
+   }]
+  }
+}
