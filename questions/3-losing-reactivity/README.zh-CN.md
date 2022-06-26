@@ -5,7 +5,7 @@
 
 在`Vue.js`中,我们同样解构/扩展“响应式”对象,但它会失去响应性。
 
-如何保证解构/扩展不失去响应性 ? 让我们开始吧 !
+如何保证解构/扩展不丢失响应性 ? 让我们开始吧 !
 
 ```ts
 <script setup lang="ts">
@@ -26,7 +26,7 @@ function useCount() {
   }
 }
 
-// Make ensure the destructure without losing reactivity
+// 确保解构不丢失响应性
 const { state: { count }, update } = useCount()
 
 </script>
