@@ -4,17 +4,17 @@ Hello, World!
 
 在这个挑战中, 我们使用基于 [vuejs/repl](https://github.com/vuejs/repl) 的`SFC`编码游乐场进行在线编码.
 
-对于这个挑战, 您将需要更改以下代码, 以使页面正确显示“hello world”.
+对于这个挑战, 您将需要更改以下代码, 以使页面正确显示“Hello World”.
 
 ```ts
 <script setup>
 import { ref } from "vue"
-const msg = ref("Hello World!!")
+const msg = ref("Hello World")
 </script>
 
 <template>
   <div>
-    <!-- The output of the page expected to be hello world -->
+    <!-- 页面的期望输出是Hello World -->
     <h1>msg</h1>
   </div>
 </template>

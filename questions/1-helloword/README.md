@@ -4,17 +4,17 @@ Hello, World!
 
 In Vue.js Challenges, we use the Vue.js SFC Playground based on [vuejs/repl](https://github.com/vuejs/repl) to coding online.
 
-For this challenge, you will need to change the following code to make the page show "hello world" correctly.
+For this challenge, you will need to change the following code to make the page show "Hello World" correctly.
 
 ```ts
 <script setup>
 import { ref } from "vue"
-const msg = ref("Hello World!!")
+const msg = ref("Hello World")
 </script>
 
 <template>
   <div>
-    <!-- The output of the page expected to be hello world -->
+    <!-- The output of the page expected to be Hello World -->
     <h1>msg</h1>
   </div>
 </template>
