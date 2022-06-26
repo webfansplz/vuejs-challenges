@@ -36,7 +36,7 @@ function initialCount(value: number | Ref<number>) {
 initialCount(initial)
 
 /**
- * Challenge 4:
+ * 挑战 4:
  * 为源响应式对象上的某个 `property` 新创建一个 `ref`.
  * 然后,`ref` 可以被传递,它会保持对其源`property`的响应式连接.
  * 确保以下输出为true
@@ -45,7 +45,7 @@ const state = reactive({
   foo: 1,
   bar: 2,
 })
-const fooRef = ref() // 改变这里的实现...
+const fooRef = ref() // 修改这里的实现...
 
 // 修改引用将更新原引用
 fooRef.value++
