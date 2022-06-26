@@ -53,7 +53,6 @@ console.log(fooRef.value === 3)
 
 <template>
   <div>
-    <h1>msg</h1>
     <p>
       <span @click="update(count-1)">-</span>
       {{ count }}
