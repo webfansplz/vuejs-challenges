@@ -5,6 +5,8 @@ export interface QuizMetaInfo {
     name: string
     github: string
   }
+  difficulty: string
+  tags: []
 }
 
 export interface Quiz {

@@ -91,6 +91,7 @@ export async function loadQuizes(): Promise<Quiz[]> {
 
 export function resolveInfo(quiz: Quiz, locale: string = defaultLocale) {
   const info = Object.assign({}, quiz.info![defaultLocale], quiz.info![locale])
-
+  if (typeof info.tags === "string")
+    info.tags = info.tags.split(",").map(i => i.trim()).filter(Boolean)
   return info as QuizMetaInfo
 }

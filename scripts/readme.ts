@@ -4,6 +4,14 @@ import { QUIZ_ROOT, resolveInfo } from "./loader"
 import { defaultLocale, f, SupportedLocale, supportedLocales, t } from "./locales"
 import type { Quiz, QuizMetaInfo } from "./types"
 
+const difficultyColors: Record<string, string> = {
+  warm: "teal",
+  easy: "7aad0c",
+  medium: "d9901a",
+  hard: "de3d37",
+  extreme: "b11b8d",
+}
+
 function escapeHtml(unsafe: string) {
   return unsafe
     .replace(/&/g, "&amp;")
@@ -35,6 +43,10 @@ function generateAuthorInfo(author: Partial<QuizMetaInfo["author"]> = {}) {
   return `By ${author.name}${author.github ? ` <a href="https://github.com/${author.github}" target="_blank">@${author.github}</a>` : ""}`
 }
 
+function generateDifficultyBadge(difficulty: string, locale: SupportedLocale) {
+  return generateBadge("", t(locale, `difficulty.${difficulty}`), difficultyColors[difficulty])
+}
+
 async function insertInfoToREADME(filepath: string, quiz: Quiz, locale: SupportedLocale) {
   if (!fs.existsSync(filepath))
     return
@@ -48,7 +60,7 @@ async function insertInfoToREADME(filepath: string, quiz: Quiz, locale: Supporte
     .replace(
       /<!--info-header-start-->[\s\S]*<!--info-header-end-->/,
       "<!--info-header-start-->"
-      + `<h1>${escapeHtml(info.title || "")}</h1>`
+      + `<h1>${escapeHtml(info.title || "")} ${generateDifficultyBadge(info.difficulty, locale)} ${(info.tags || []).map(i => generateBadge("", `#${i}`, "999")).join(" ")}</h1>`
       + `<blockquote><p>${generateAuthorInfo(info.author)}</p></blockquote>`
       + "<p>"
       + generateBadgeLink(quiz.testLink, "", t(locale, "badge.take-the-challenge"), "213547", "?logo=vue.js&logoColor=42b883")

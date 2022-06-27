@@ -1,4 +1,9 @@
 {
   "badge.take-the-challenge": "Take the Challenge",
+  "difficulty.easy": "easy",
+  "difficulty.extreme": "extreme",
+  "difficulty.hard": "hard",
+  "difficulty.medium": "medium",
+  "difficulty.warm": "warm-up",
   "display": "English"
 }

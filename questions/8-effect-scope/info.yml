@@ -4,4 +4,6 @@ author:
   name: webfansplz
   github: webfansplz
 
+difficulty: medium
 
+tags: Composition API,Reactivity:Advanced
