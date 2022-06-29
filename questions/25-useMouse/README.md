@@ -5,8 +5,7 @@ We should focus on Reusability when use `Vue.js`,Composables functions are a goo
 
 
 ```ts
-<script setup>
-import { useMouse } from "./mouse.js"
+<script setup lang="ts">
 
 // Implement ...
 function useEventListener(target, event, callback) {

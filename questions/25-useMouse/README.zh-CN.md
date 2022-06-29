@@ -5,8 +5,7 @@
 
 
 ```ts
-<script setup>
-import { useMouse } from "./mouse.js"
+<script setup lang="ts">
 
 // Implement ...
 function useEventListener(target, event, callback) {
