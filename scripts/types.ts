@@ -1,3 +1,6 @@
+import type { getOctokit, context } from "@actions/github"
+import type Core from "@actions/core"
+import type IO from "@actions/io"
 
 export interface QuizMetaInfo {
   title: string
@@ -16,3 +19,5 @@ export interface Quiz {
   readme: Record<string, string>
   info: Partial<QuizMetaInfo> | undefined
 }
+
+export type Action = (github: Github, context: Context, core: typeof Core, io: typeof IO) => Promise<void>

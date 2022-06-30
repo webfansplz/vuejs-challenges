@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0",
+    "@actions/io": "^1.1.0",
+    "fast-glob": "^3.2.5",
+    "fs-extra": "^9.1.0",
+    "js-yaml": "^4.1.0",
+    "tsx": "^3.6.0"
+  },
+  "name": "@vuejs-challenges/scripts",
+  "private": true,
+  "version": "1.0.0"
+}

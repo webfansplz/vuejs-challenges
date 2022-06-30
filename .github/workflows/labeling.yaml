@@ -1,0 +1,14 @@
+name: Labeling
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd scripts && npm i --only=production
+      - run: cd scripts/actions && npx tsx ./loader.ts ${{github.token}} labeling
+
