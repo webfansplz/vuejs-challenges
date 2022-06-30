@@ -2,7 +2,7 @@
 
 
 <p align='center'>
-`Vue.js` 挑战合集
+Vue.js 挑战合集
 </p>
 
 <p align='center'>
