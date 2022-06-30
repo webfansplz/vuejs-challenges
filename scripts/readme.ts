@@ -13,6 +13,18 @@ export function getNearborREADME(quiz: Quiz, locale?: string) {
     : "./README.md"
 }
 
+export function generateShareAnswerLink(quiz: Quiz, locale: string = defaultLocale) {
+  const info = resolveInfo(quiz, locale)
+  if (locale === defaultLocale)
+    return `https://github.com/webfansplz/vuejs-challenges/issues/new?labels=answer,${encodeURIComponent(locale)}&template=0-answer.md&title=${encodeURIComponent(`${quiz.no} - ${info.title}`)}`
+  else
+    return `https://github.com/webfansplz/vuejs-challenges/issues/new?labels=answer,${encodeURIComponent(locale)}&template=1-answer.${locale}.md&title=${encodeURIComponent(`${quiz.no} - ${info.title}`)}`
+}
+
+export function generateSolutionsLink(no: number) {
+  return `${REPO}/issues?q=label%3A${no}+label%3Aanswer`
+}
+
 function generateAuthorInfo(author: Partial<QuizMetaInfo["author"]> = {}) {
   return `By ${author.name}${author.github ? ` <a href="https://github.com/${author.github}" target="_blank">@${author.github}</a>` : ""}`
 }
@@ -72,6 +84,14 @@ async function insertInfoToREADME(filepath: string, quiz: Quiz, locale: Supporte
       + (availableLocales.length ? ("&nbsp;&nbsp;&nbsp;" + availableLocales.map(l => generateBadgeLink(getNearborREADME(quiz, l), "", t(l, "display"), "gray")).join(" ")) : "")
       + "</p>"
       + "<!--info-header-end-->",
+    )
+    .replace(
+      /<!--info-footer-start-->[\s\S]*<!--info-footer-end-->/,
+      "<!--info-footer-start--><br>"
+      + generateBadgeLink(`../../${f("README", locale, "md")}`, "", t(locale, "badge.back"), "grey")
+      + generateBadgeLink(generateShareAnswerLink(quiz, locale), "", t(locale, "badge.share-your-solutions"), "teal")
+      + generateBadgeLink(generateSolutionsLink(quiz.no), "", t(locale, "badge.checkout-solutions"), "de5a77", "?logo=awesome-lists&logoColor=white")
+      + "<!--info-footer-end-->",
     )
 
   await fs.writeFile(filepath, fileContent, "utf-8")
