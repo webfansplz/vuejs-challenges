@@ -1,5 +1,6 @@
-# vuejs-challenges
-
+<p align='center'>
+<img src='./logo.png' width='400'/>
+</p>
 
 <p align='center'>
 Vue.js 挑战合集
