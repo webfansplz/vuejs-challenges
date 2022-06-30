@@ -1,10 +1,11 @@
 
 import { loadQuizes } from "./loader"
-import { updateQuizREADME } from "./readme"
+import { updateQuizREADME, updateIndexREADME } from "./readme"
 
 export async function build() {
   const quizes = await loadQuizes()
   await updateQuizREADME(quizes)
+  await updateIndexREADME(quizes)
 }
 
 build()

@@ -3,11 +3,9 @@ import fs from "fs-extra"
 import fg from "fast-glob"
 import YAML from "js-yaml"
 import { serialize } from "./utils"
+import { QUIZ_ROOT, VUE_SFC_PLAYGROUND_URL } from "./configs"
 import type { QuizMetaInfo, Quiz } from "./types"
 import { supportedLocales, defaultLocale, f } from "./locales"
-
-export const QUIZ_ROOT = path.resolve(__dirname, "../questions")
-export const VUE_SFC_PLAYGROUND_URL = "https://sfc.vuejs.org/"
 
 export async function loadFile(filepath: string) {
   if (fs.existsSync(filepath))
@@ -38,6 +36,10 @@ export async function loadLocaleVariations<T = string>(
   return data
 }
 
+export function normalizeSFCLink(content: Record<string, string>) {
+  return VUE_SFC_PLAYGROUND_URL + serialize(content)
+}
+
 export function cleanUpREADME(text: string) {
   return text
     .replace(/<!--info-header-start-->[\s\S]*<!--info-header-end-->/, "")
@@ -45,8 +47,19 @@ export function cleanUpREADME(text: string) {
     .trim()
 }
 
-export function normalizeFileContent(content: Record<string, string>) {
-  return VUE_SFC_PLAYGROUND_URL + serialize(content)
+export function resolveInfo(quiz: Quiz, locale: string = defaultLocale) {
+  const info = Object.assign({}, quiz.info![defaultLocale], quiz.info![locale])
+  if (typeof info.tags === "string")
+    info.tags = info.tags.split(",").map((i: string) => i.trim()).filter(Boolean)
+  return <QuizMetaInfo>info
+}
+
+export function loadInfo(s: string): Partial<QuizMetaInfo> | undefined {
+  const object = YAML.load(s) as Record<string, unknown>
+  if (!object)
+    return undefined
+
+  return object
 }
 
 export async function loadQuiz(dir: string): Promise<Quiz> {
@@ -60,20 +73,17 @@ export async function loadQuiz(dir: string): Promise<Quiz> {
     })),
   )
 
+  const quizLink = normalizeSFCLink(content.reduce((pre, cur) => ({ ...pre, ...cur }), {}))
+  const readmePath = path.join(QUIZ_ROOT, dir, "README.md")
+  const infoPath = path.join(QUIZ_ROOT, dir, "info.yml")
+
   return {
     path: dir,
-    readme: await loadLocaleVariations(path.join(QUIZ_ROOT, dir, "README.md"), cleanUpREADME),
-    info: await loadLocaleVariations(path.join(QUIZ_ROOT, dir, "info.yml"), loadInfo),
-    testLink: normalizeFileContent(content.reduce((pre, cur) => ({ ...pre, ...cur }), {})),
+    quizLink,
+    no: Number(dir.replace(/^(\d+)-.*/, "$1")),
+    readme: await loadLocaleVariations(readmePath, cleanUpREADME),
+    info: await loadLocaleVariations(infoPath, loadInfo),
   }
-}
-
-export function loadInfo(s: string): Partial<QuizMetaInfo> | undefined {
-  const object = YAML.load(s) as Record<string, unknown>
-  if (!object)
-    return undefined
-
-  return object
 }
 
 export async function loadQuizes(): Promise<Quiz[]> {
@@ -87,11 +97,4 @@ export async function loadQuizes(): Promise<Quiz[]> {
   )
 
   return quizes
-}
-
-export function resolveInfo(quiz: Quiz, locale: string = defaultLocale) {
-  const info = Object.assign({}, quiz.info![defaultLocale], quiz.info![locale])
-  if (typeof info.tags === "string")
-    info.tags = info.tags.split(",").map(i => i.trim()).filter(Boolean)
-  return info as QuizMetaInfo
 }

@@ -10,7 +10,8 @@ export interface QuizMetaInfo {
 }
 
 export interface Quiz {
-  testLink: string
+  no: number
+  quizLink: string
   path: string
   readme: Record<string, string>
   info: Partial<QuizMetaInfo> | undefined
