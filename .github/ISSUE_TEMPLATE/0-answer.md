@@ -17,6 +17,6 @@ Before you submit your solutions, please kindly search for similar solutions tha
 Thanks!
 -->
 
-```ts
+```vue
 // your answers
 ```

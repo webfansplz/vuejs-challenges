@@ -18,6 +18,6 @@ labels: answer, zh-CN
 -->
 
 
-```ts
+```vue
 // 你的答案
 ```
