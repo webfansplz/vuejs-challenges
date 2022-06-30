@@ -21,3 +21,10 @@ labels: answer, zh-CN
 ```vue
 // 你的答案
 ```
+
+
+<!--
+
+或者 Vue SFC Playground 在线链接 (https://sfc.vuejs.org)
+
+-->
