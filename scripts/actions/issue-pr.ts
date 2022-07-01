@@ -129,6 +129,8 @@ const action: Action = async(github, context, core) => {
 
     const files: Record<string, string> = {
       [resolveFilePath(dir, "info", "yml", locale)]: `${YAML.dump(info)}\n`,
+      [resolveFilePath(dir, "README", "md", "en")]: quiz.readme.en,
+      [resolveFilePath(dir, "README", "md", "zh-CN")]: quiz.readme["zh-CN"],
       ...transformQuizToFiles(question),
     }
 
