@@ -121,7 +121,7 @@ const action: Action = async(github, context, core) => {
     await PushCommit(github, {
       owner: context.repo.owner,
       repo: context.repo.repo,
-      base: "master",
+      base: "main",
       head: `pulls/${no}`,
       changes: {
         files,
