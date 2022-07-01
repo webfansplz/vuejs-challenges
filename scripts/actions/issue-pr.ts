@@ -153,7 +153,7 @@ const action: Action = async(github, context, core) => {
       const { data: pr } = await github.pulls.create({
         owner: context.repo.owner,
         repo: context.repo.repo,
-        base: "master",
+        base: "main",
         head: `pulls/${no}`,
         title: `#${no} - ${info.title}`,
         body: `This is an auto-generated PR that auto reflect on #${no}, please go to #${no} for discussion or making changes.\n\nCloses #${no}`,
