@@ -27,7 +27,7 @@ tags: union, array # separate by comma
 
 以下是给予挑战者开始做题的代码模版，
 
-如果您想提交多个文件，只需创建多个`<!--challenges-start--><!--challenges-end-->`，并描述文件名和代码內容
+如果您想提交多个文件，只需创建多个`<!--challenges-start--><!--challenges-end-->`，并按照以下格式填写文件名和代码內容
 
 
 <!--challenges-start-->
