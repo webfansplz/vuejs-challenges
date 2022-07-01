@@ -1,3 +1,5 @@
+import { defaultLocale } from "./locales"
+
 // prefer old unicode hacks for backward compatibility
 // https://base64.guru/developers/javascript/examples/unicode-strings
 export function utoa(data: string): string {
@@ -15,4 +17,11 @@ export function escapeHtml(unsafe: string) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;")
+}
+
+export function resolveFilePath(dir: string, name: string, ext: string, locale: string) {
+  if (locale === defaultLocale)
+    return `${dir}/${name}.${ext}`
+  else
+    return `${dir}/${name}.${locale}.${ext}`
 }

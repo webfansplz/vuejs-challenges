@@ -20,4 +20,6 @@ export interface Quiz {
   info: Partial<QuizMetaInfo> | undefined
 }
 
+export type Github = ReturnType<typeof getOctokit>
+export type Context = typeof context
 export type Action = (github: Github, context: Context, core: typeof Core, io: typeof IO) => Promise<void>
