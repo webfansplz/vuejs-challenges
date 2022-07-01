@@ -183,13 +183,14 @@ const action: Action = async(github, context, core) => {
     }
     else {
       core.info("-----Creating PR-----")
+      const normalizedNo = no - 100
       const { data: pr } = await github.pulls.create({
         owner: context.repo.owner,
         repo: context.repo.repo,
         base: "main",
-        head: `pulls/${no - 100}`,
-        title: `#${no - 100} - ${info.title}`,
-        body: `This is an auto-generated PR that auto reflect on #${no - 100}, please go to #${no - 100} for discussion or making changes.\n\nCloses #${no - 100}`,
+        head: `pulls/${normalizedNo}`,
+        title: `#${normalizedNo} - ${info.title}`,
+        body: `This is an auto-generated PR that auto reflect on #${normalizedNo}, please go to #${normalizedNo} for discussion or making changes.\n\nCloses #${normalizedNo}`,
         labels: ["auto-generated"],
       })
 
