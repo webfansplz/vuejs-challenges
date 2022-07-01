@@ -41,6 +41,10 @@ Vue.js 挑战合集
 - 通过在 `Issue` 下留言帮助他人
 
 
+[开一个新的 Issue](https://github.com/webfansplz/vuejs-challenges/issues/new/choose) 并选择相应的模板即可，感谢参与！
+
+> 💡 尽管你可以使用中文进行讨论，我们还是鼓励你尝试使用英文发起 Issue 与评论，这样可以让你的问题被更多人看到也可以帮助更多人。
+
 ## 🌸 感谢
 
 这个项目的灵感来自于 [type-challenges](https://github.com/type-challenges/type-challenges) ♥️。

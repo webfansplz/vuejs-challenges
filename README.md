@@ -41,6 +41,8 @@ There are several ways you can contribute to this project
 - Share the problems you have faced in real-world projects, regardless you have the solution or not - the community would help you as well.
 - Help others by discussing issues
 
+Just [open an issue](https://github.com/webfansplz/vuejs-challenges/issues/new/choose) and choose the corresponding template. Thanks!
+
 ## 🌸 Credits
 
 This project is inspired by [type-challenges](https://github.com/type-challenges/type-challenges) ♥️.
