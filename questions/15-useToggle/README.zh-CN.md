@@ -1,7 +1,7 @@
 <!--info-header-start--><h1>切换器 <img src="https://img.shields.io/badge/-%E4%B8%AD%E7%AD%89-d9901a" alt="中等"/> <img src="https://img.shields.io/badge/-%23Composable%20Function-999" alt="#Composable Function"/></h1><blockquote><p>By webfansplz <a href="https://github.com/webfansplz" target="_blank">@webfansplz</a></p></blockquote><p><a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cCBsYW5nPSd0cyc+XG5cbi8qKlxuICogSW1wbGVtZW50IGEgY29tcG9zYWJsZSBmdW5jdGlvbiB0aGF0IHRvZ2dsZSBzdGF0ZVxuICogTWFrZSB0aGUgZnVuY3Rpb24gd29yayBmaW5lXG4qL1xuZnVuY3Rpb24gdXNlVG9nZ2xlKCkge1xuXG59XG5cbmNvbnN0IFtzdGF0ZSwgdG9nZ2xlXSA9IHVzZVRvZ2dsZShmYWxzZSlcblxuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cbiAgPHA+U3RhdGU6IHt7IHN0YXRlID8gJ09OJyA6ICdPRkYnIH19PC9wPlxuICA8cCBAY2xpY2s9XCJ0b2dnbGVcIj5cbiAgICBUb2dnbGUgc3RhdGVcbiAgPC9wPlxuPC90ZW1wbGF0ZT5cbiJ9" target="_blank"><img src="https://img.shields.io/badge/-%E6%8E%A5%E5%8F%97%E6%8C%91%E6%88%98-213547?logo=vue.js&logoColor=42b883" alt="接受挑战"/></a> &nbsp;&nbsp;&nbsp;<a href="./README.md" target="_blank"><img src="https://img.shields.io/badge/-English-gray" alt="English"/></a> </p><!--info-header-end-->
 
 
-这个挑战开始,我们将尝试编写可组合函数,让我们从`useToggle`开始 👇:
+这个挑战开始,我们将尝试编写可组合函数，让我们从`useToggle`开始 👇:
 
 ```ts
 <script setup lang='ts'>

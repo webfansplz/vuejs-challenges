@@ -1,7 +1,7 @@
 <!--info-header-start--><h1>函数式组件 <img src="https://img.shields.io/badge/-%E4%B8%AD%E7%AD%89-d9901a" alt="中等"/> <img src="https://img.shields.io/badge/-%23Components-999" alt="#Components"/></h1><blockquote><p>By webfansplz <a href="https://github.com/webfansplz" target="_blank">@webfansplz</a></p></blockquote><p><a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cCBsYW5nPSd0cyc+XG5cbmltcG9ydCB7IHJlZiB9IGZyb20gXCJ2dWVcIlxuXG4vKipcbiAqIEltcGxlbWVudCB0aGUgZnVuY3Rpb25hbCBjb21wb25lbnQgOlxuICogMS4gUmVuZGVyIGxpc3QgZWxlbWVudHMgKHVsL2xpKSB3aXRoIGxpc3QgZGF0YVxuICogMi4gQ2hhbmdlIHRoZSBsaXN0IGl0ZW0gdGV4dCBjb2xvciB0byBiZSByZWQgd2hlbiBjbGljayBpdC5cbiovXG5jb25zdCBMaXN0Q29tcG9uZW50ID0gKCkgPT4ge1xufVxuXG5jb25zdCBsaXN0ID0gW3tcbiAgbmFtZTogXCJKb2huXCIsXG59LCB7XG4gIG5hbWU6IFwiRG9lXCIsXG59LCB7XG4gIG5hbWU6IFwiU21pdGhcIixcbn1dXG5cbmNvbnN0IGFjdGl2ZUluZGV4ID0gcmVmKDApXG5cbmZ1bmN0aW9uIHRvZ2dsZShpbmRleDogbnVtYmVyKSB7XG4gIGFjdGl2ZUluZGV4LnZhbHVlID0gaW5kZXhcbn1cblxuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cbiAgPGxpc3QtY29tcG9uZW50XG4gICAgOmxpc3Q9XCJsaXN0XCJcbiAgICA6YWN0aXZlLWluZGV4PVwiYWN0aXZlSW5kZXhcIlxuICAgIEB0b2dnbGU9XCJ0b2dnbGVcIlxuICAvPlxuPC90ZW1wbGF0ZT5cbiJ9" target="_blank"><img src="https://img.shields.io/badge/-%E6%8E%A5%E5%8F%97%E6%8C%91%E6%88%98-213547?logo=vue.js&logoColor=42b883" alt="接受挑战"/></a> &nbsp;&nbsp;&nbsp;<a href="./README.md" target="_blank"><img src="https://img.shields.io/badge/-English-gray" alt="English"/></a> </p><!--info-header-end-->
 
 
-在这个挑战中,我们将尝试实现一个函数式组件,让我们开始吧 👇:
+在这个挑战中，我们将尝试实现一个函数式组件，让我们开始吧 👇:
 
 ```ts
 <script setup lang='ts'>
