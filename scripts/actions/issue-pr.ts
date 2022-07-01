@@ -118,18 +118,18 @@ const action: Action = async(github, context, core) => {
     )}`
     const userEmail = `${user.id}+${user.login}@users.noreply.github.com`
 
-    const trasmformQuizToFiles = (question: Record<string, string>) => {
+    const transformQuizToFiles = (question: Record<string, string>) => {
       const files = {}
       Object.keys(question)?.filter(Boolean)?.forEach((item) => {
         const [name, ext] = item.split(".")
-        files[resolveFilePath(dir, name, ext, locale)] = question[item]
+        files[resolveFilePath(dir, name, ext, "en")] = question[item]
       })
       return files
     }
 
     const files: Record<string, string> = {
       [resolveFilePath(dir, "info", "yml", locale)]: `${YAML.dump(info)}\n`,
-      ...trasmformQuizToFiles(question),
+      ...transformQuizToFiles(question),
     }
 
     await PushCommit(github, {
@@ -246,7 +246,7 @@ function getChallengesContent(text: string) {
   comments.forEach((comment: string) => {
     const fileName = getFileName(comment)!
     const codeBlock = getCodeBlock(comment)!
-    result[fileName] = codeBlock
+    fileName && (result[fileName] = codeBlock)
   })
   return result
 }
