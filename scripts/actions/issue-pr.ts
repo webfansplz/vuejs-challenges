@@ -4,6 +4,8 @@ import { PushCommit } from "@type-challenges/octokit-create-pull-request"
 import { Action, Context, Github, Quiz } from "../types"
 import { normalizeSFCLink } from "../loader"
 import { resolveFilePath } from "../utils"
+import { generateBadgeLink } from "../badge"
+import { t } from "../locales"
 
 const Messages = {
   "en": {
@@ -30,7 +32,7 @@ export const getOthers = <A, B>(condition: boolean, a: A, b: B): A | B => condit
 const action: Action = async(github, context, core) => {
   const payload = context.payload || {}
   const issue = payload.issue
-  const no = context.issue.number
+  const no = context.issue.number + 100
 
   if (!issue) return
 
@@ -89,6 +91,10 @@ const action: Action = async(github, context, core) => {
       info: {
         [locale]: info,
       },
+      readme: {
+        "en": "<!--info-header-start-->\n<!--info-header-end-->\n<!--info-footer-start-->\n<!--info-footer-end-->\n",
+        "zh-CN": "<!--info-header-start-->\n<!--info-header-end-->\n<!--info-footer-start-->\n<!--info-footer-end-->\n",
+      },
       quizLink: normalizeSFCLink(question),
     }
 
@@ -102,19 +108,28 @@ const action: Action = async(github, context, core) => {
     })
 
     const existing_pull = pulls.find(
-      i =>
-        i.user.login === "github-actions[bot]" && i.title.startsWith(`#${no} `),
+      item =>
+        item.user!.login === "github-actions[bot]" && item.title.startsWith(`#${no} `),
     )
 
-    const dir = `questions/${no}-${info.difficulty}-${slug(
+    const dir = `questions/${no}-${slug(
       info.title.replace(/\./g, "-").replace(/<.*>/g, ""),
       { tone: false },
     )}`
     const userEmail = `${user.id}+${user.login}@users.noreply.github.com`
 
+    const trasmformQuizToFiles = (question: Record<string, string>) => {
+      const files = {}
+      Object.keys(question)?.filter(Boolean)?.forEach((item) => {
+        const [name, ext] = item.split(".")
+        files[resolveFilePath(dir, name, ext, locale)] = question[item]
+      })
+      return files
+    }
+
     const files: Record<string, string> = {
       [resolveFilePath(dir, "info", "yml", locale)]: `${YAML.dump(info)}\n`,
-      // ...question,
+      ...trasmformQuizToFiles(question),
     }
 
     await PushCommit(github, {
@@ -133,11 +148,19 @@ const action: Action = async(github, context, core) => {
       fresh: !existing_pull,
     })
 
+    const playgroundBadge = generateBadgeLink(
+      quiz.quizLink,
+      "",
+      t(locale, "badge.preview-playground"),
+      "3178c6",
+      "?logo=typescript&logoColor=white",
+    )
+
     const createMessageBody = (prNumber: number) =>
       `${Messages[locale].issue_update_reply.replace(
         "{0}",
         prNumber.toString(),
-      )}\n\n${getTimestampBadge()}`
+      )}\n\n${getTimestampBadge()}  ${playgroundBadge}`
 
     if (existing_pull) {
       core.info("-----Pull Request Existed-----")
@@ -187,7 +210,7 @@ async function updateComment(github: Github, context: Context, body: string) {
   })
 
   const existing_comment = comments.find(
-    i => i.user.login === "github-actions[bot]",
+    item => item.user!.login === "github-actions[bot]",
   )
 
   if (existing_comment) {
