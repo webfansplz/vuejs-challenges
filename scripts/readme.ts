@@ -157,7 +157,6 @@ export async function updateIndexREADME(quizes: Quiz[]) {
         })
       challengesREADME += "</td></tr>"
     }
-    challengesREADME += "<tr><td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code></td><td></td></tr>"
     challengesREADME += "</tbody></table></details>"
 
     let readme = await fs.readFile(filepath, "utf-8")
