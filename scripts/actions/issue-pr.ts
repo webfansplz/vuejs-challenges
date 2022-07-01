@@ -114,14 +114,15 @@ const action: Action = async(github, context, core) => {
 
     const files: Record<string, string> = {
       [resolveFilePath(dir, "info", "yml", locale)]: `${YAML.dump(info)}\n`,
-      [resolveFilePath(dir, "README", "md", locale)]: `${question}\n`,
       ...question,
     }
+
+    console.log("-------------------test", files, question)
 
     await PushCommit(github, {
       owner: context.repo.owner,
       repo: context.repo.repo,
-      base: "main",
+      base: "master",
       head: `pulls/${no}`,
       changes: {
         files,
