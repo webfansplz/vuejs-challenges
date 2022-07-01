@@ -1,0 +1,14 @@
+name: Toggle PR With Issue
+
+on:
+  issues:
+    types: [closed, reopened]
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd scripts && npm i --only=production
+      - run: cd scripts/actions && npx esno ./loader.ts ${{github.token}} toggle-pr-with-issue
+
