@@ -187,8 +187,8 @@ const action: Action = async(github, context, core) => {
         owner: context.repo.owner,
         repo: context.repo.repo,
         base: "main",
-        head: `pulls/${no}`,
-        title: `#${no} - ${info.title}`,
+        head: `pulls/${no - 100}`,
+        title: `#${no - 100} - ${info.title}`,
         body: `This is an auto-generated PR that auto reflect on #${no - 100}, please go to #${no - 100} for discussion or making changes.\n\nCloses #${no - 100}`,
         labels: ["auto-generated"],
       })
