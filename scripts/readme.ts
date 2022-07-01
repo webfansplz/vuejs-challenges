@@ -71,8 +71,8 @@ async function insertInfoToREADME(filepath: string, quiz: Quiz, locale: Supporte
   /* eslint-disable prefer-template */
 
   const info = resolveInfo(quiz, locale)
+  if (Object.keys(info).length === 0) return
   const availableLocales = supportedLocales.filter(l => l !== locale).filter(l => !!quiz.readme[l])
-
   const fileContent = text
     .replace(
       /<!--info-header-start-->[\s\S]*<!--info-header-end-->/,
@@ -132,6 +132,8 @@ export async function updateIndexREADME(quizes: Quiz[]) {
 
     for (const quiz of quizesByDifficulty) {
       const info = resolveInfo(quiz, locale)
+
+      if (Object.keys(info).length === 0) return
 
       if (prev !== info!.difficulty!) {
         challengesREADME += `${prev ? "<br><br>" : ""}${generateDifficultyBadgeInverted(info!.difficulty!, locale, quizesByDifficulty.filter((q) => {

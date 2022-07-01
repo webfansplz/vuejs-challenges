@@ -127,10 +127,18 @@ const action: Action = async(github, context, core) => {
       return files
     }
 
+    const anotherLocale = locale === "zh-CN" ? "en" : "zh-CN"
     const files: Record<string, string> = {
       [resolveFilePath(dir, "info", "yml", locale)]: `${YAML.dump(info)}\n`,
-      [resolveFilePath(dir, "README", "md", "en")]: quiz.readme.en,
-      [resolveFilePath(dir, "README", "md", "zh-CN")]: quiz.readme["zh-CN"],
+      [resolveFilePath(dir, "info", "yml", anotherLocale)]: `${YAML.dump({
+        ...info,
+        title: slug(
+          info.title.replace(/\./g, "-").replace(/<.*>/g, ""),
+          { tone: false },
+        ),
+      })}\n`,
+      [resolveFilePath(dir, "README", "md", locale)]: quiz.readme.en,
+      [resolveFilePath(dir, "README", "md", anotherLocale)]: quiz.readme["zh-CN"],
       ...transformQuizToFiles(question),
     }
 
