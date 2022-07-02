@@ -1,0 +1,12 @@
+[build.environment]
+  NPM_FLAGS = "--version"
+  NODE_VERSION = "16"
+
+[build]
+  publish = "site/.vitepress/dist"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npm run site:build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

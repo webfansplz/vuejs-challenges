@@ -1,3 +1,4 @@
+!site/.vitepress
 dist
 node_modules
 .output

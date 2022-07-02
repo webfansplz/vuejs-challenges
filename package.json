@@ -11,7 +11,12 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsx ./scripts/build.ts"
+    "build": "tsx ./scripts/build.ts",
+    "site:dev": "pnpm run -C site update && pnpm run -C site dev",
+    "site:build": "pnpm run -C site build",
+    "site:serve": "pnpm run -C site serve",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0",
+    "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.json"
   },
   "bugs": {
     "url": "https://github.com/webfansplz/vuejs-challenges/issues"

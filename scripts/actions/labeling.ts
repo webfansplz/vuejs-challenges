@@ -1,4 +1,4 @@
-import { Action } from '../types'
+import { Action } from "../types"
 
 const action: Action = async(github, context, core) => {
   const payload = context.payload
@@ -11,7 +11,7 @@ const action: Action = async(github, context, core) => {
     .map((i: any) => i && i.name)
     .filter(Boolean)
 
-  if (labels.includes('answer')) {
+  if (labels.includes("answer")) {
     const match = issue.title.match(/^(\d+) - /)
     if (match && match[1]) {
       const no = Number(match[1])
@@ -20,12 +20,12 @@ const action: Action = async(github, context, core) => {
 
       const name = no.toString()
 
-      if (labels.includes('trigger-bot')) {
+      if (labels.includes("trigger-bot")) {
         await github.issues.removeLabel({
           issue_number: context.issue.number,
           owner: context.repo.owner,
           repo: context.repo.repo,
-          name: 'trigger-bot',
+          name: "trigger-bot",
         })
       }
 
@@ -44,7 +44,7 @@ const action: Action = async(github, context, core) => {
           owner: context.repo.owner,
           repo: context.repo.repo,
           name,
-          color: 'ffffff',
+          color: "ffffff",
         })
       }
 
@@ -57,7 +57,7 @@ const action: Action = async(github, context, core) => {
     }
   }
   else {
-    core.info('No matched labels, skipped')
+    core.info("No matched labels, skipped")
   }
 }
 

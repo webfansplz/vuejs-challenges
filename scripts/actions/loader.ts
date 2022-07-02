@@ -1,8 +1,8 @@
-import * as core from '@actions/core'
-import { context, getOctokit } from '@actions/github'
-import * as io from '@actions/io'
+import * as core from "@actions/core"
+import { context, getOctokit } from "@actions/github"
+import * as io from "@actions/io"
 
-process.on('unhandledRejection', handleError)
+process.on("unhandledRejection", handleError)
 main().catch(handleError)
 
 async function main(): Promise<void> {

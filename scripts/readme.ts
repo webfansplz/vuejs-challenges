@@ -47,7 +47,7 @@ function quizToBadge(quiz: Quiz, locale: string, absolute = false) {
   )
 }
 
-function getAllTags(quizes: Quiz[], locale: string) {
+export function getAllTags(quizes: Quiz[], locale: string) {
   const set = new Set<string>()
   for (const quiz of quizes) {
     const info = resolveInfo(quiz, locale)
@@ -57,7 +57,7 @@ function getAllTags(quizes: Quiz[], locale: string) {
   return Array.from(set).sort()
 }
 
-function getQuizesByTag(quizes: Quiz[], locale: string, tag: string) {
+export function getQuizesByTag(quizes: Quiz[], locale: string, tag: string) {
   return quizes.filter((quiz) => {
     const info = resolveInfo(quiz, locale)
     return !!info.tags?.includes(tag)

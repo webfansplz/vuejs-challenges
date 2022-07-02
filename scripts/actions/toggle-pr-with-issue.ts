@@ -1,4 +1,4 @@
-import { Action } from '../types'
+import { Action } from "../types"
 
 const action: Action = async(github, context, core) => {
   const payload = context.payload || {}
@@ -11,7 +11,7 @@ const action: Action = async(github, context, core) => {
     .map((i: any) => i && i.name)
     .filter(Boolean)
 
-  if (!labels.includes('new-challenge'))
+  if (!labels.includes("new-challenge"))
     return
 
   // close pull request
@@ -28,29 +28,29 @@ const action: Action = async(github, context, core) => {
   const { data: pulls } = await github.pulls.list({
     owner: context.repo.owner,
     repo: context.repo.repo,
-    state: action === 'closed' ? 'open' : 'closed',
+    state: action === "closed" ? "open" : "closed",
   })
 
   core.info(`pulls.length ${pulls.length}`)
   core.info(JSON.stringify(pulls))
 
   const existing_pull = pulls.find(i =>
-    i.user.login === 'github-actions[bot]'
+    i.user.login === "github-actions[bot]"
     && i.title.startsWith(`#${no} `),
   )
 
   if (!existing_pull) {
-    core.info('existing_pull not exist')
+    core.info("existing_pull not exist")
     return
   }
 
   core.info(JSON.stringify(context))
 
-  if (context.payload.action === 'reopened') {
+  if (context.payload.action === "reopened") {
     await github.pulls.update({
       ...context.repo,
       pull_number: existing_pull.number,
-      state: 'open',
+      state: "open",
     })
   }
   else {
@@ -58,7 +58,7 @@ const action: Action = async(github, context, core) => {
     await github.pulls.update({
       ...context.repo,
       pull_number: existing_pull.number,
-      state: 'closed',
+      state: "closed",
     })
   }
 }

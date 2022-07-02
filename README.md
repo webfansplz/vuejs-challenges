@@ -12,7 +12,7 @@ English | <a href='./README.zh-CN.md'>简体中文</a>
 
 ## 📖 Introduction
 
-I like `Vue.js` 💗. It's so Awesome 🚀. It helps me finish my work well and build applications.
+I like `Vue.js` ♥️. It's so Awesome 🚀. It helps me finish my work well and build applications.
 
 I was looking for a project for everyone to learn `Vue.js` together, and that's why this project was born. I believe we can grow together here, and hope it helps you.
 

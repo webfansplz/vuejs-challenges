@@ -1,0 +1,3 @@
+# Challenges
+
+<ChallengeList />

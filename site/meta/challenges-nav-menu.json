@@ -1,0 +1,267 @@
+{
+  "categorys": [
+    {
+      "text": "Built-ins",
+      "link": "/challenges#category=Built-ins"
+    },
+    {
+      "text": "CSS Features",
+      "link": "/challenges#category=CSS%20Features"
+    },
+    {
+      "text": "Components",
+      "link": "/challenges#category=Components"
+    },
+    {
+      "text": "Composable Function",
+      "link": "/challenges#category=Composable%20Function"
+    },
+    {
+      "text": "Composition API",
+      "link": "/challenges#category=Composition%20API"
+    },
+    {
+      "text": "Directives",
+      "link": "/challenges#category=Directives"
+    },
+    {
+      "text": "Global API:General",
+      "link": "/challenges#category=Global%20API%3AGeneral"
+    },
+    {
+      "text": "Lifecycle",
+      "link": "/challenges#category=Lifecycle"
+    },
+    {
+      "text": "Reactivity:Advanced",
+      "link": "/challenges#category=Reactivity%3AAdvanced"
+    },
+    {
+      "text": "Reactivity:Core",
+      "link": "/challenges#category=Reactivity%3ACore"
+    },
+    {
+      "text": "Reactivity:Utilities",
+      "link": "/challenges#category=Reactivity%3AUtilities"
+    },
+    {
+      "text": "Utility Function",
+      "link": "/challenges#category=Utility%20Function"
+    },
+    {
+      "text": "Web Components",
+      "link": "/challenges#category=Web%20Components"
+    }
+  ],
+  "navMenu": [
+    {
+      "text": "Built-ins",
+      "items": [
+        {
+          "text": "DOM Portal",
+          "link": "/questions/13-dom-portal/README"
+        },
+        {
+          "text": "Optimize performance directive",
+          "link": "/questions/12-optimize-perf-directive/README"
+        }
+      ]
+    },
+    {
+      "text": "CSS Features",
+      "items": [
+        {
+          "text": "Dynamic css values",
+          "link": "/questions/14-dynamic-css-values/README"
+        },
+        {
+          "text": "Global CSS",
+          "link": "/questions/27-global-css/README"
+        }
+      ]
+    },
+    {
+      "text": "Components",
+      "items": [
+        {
+          "text": "DOM Portal",
+          "link": "/questions/13-dom-portal/README"
+        },
+        {
+          "text": "functional component",
+          "link": "/questions/21-functional-component/README"
+        }
+      ]
+    },
+    {
+      "text": "Composable Function",
+      "items": [
+        {
+          "text": "useToggle",
+          "link": "/questions/15-useToggle/README"
+        },
+        {
+          "text": "useCounter",
+          "link": "/questions/17-useCounter/README"
+        },
+        {
+          "text": "useLocalStorage",
+          "link": "/questions/18-useLocalStorage/README"
+        },
+        {
+          "text": "useMouse",
+          "link": "/questions/25-useMouse/README"
+        }
+      ]
+    },
+    {
+      "text": "Composition API",
+      "items": [
+        {
+          "text": "Lifecycle Hooks",
+          "link": "/questions/10-lifecycle/README"
+        },
+        {
+          "text": "ref family",
+          "link": "/questions/2-ref-family/README"
+        },
+        {
+          "text": "losing-reactivity",
+          "link": "/questions/3-losing-reactivity/README"
+        },
+        {
+          "text": "writable-computed",
+          "link": "/questions/4-writable-computed/README"
+        },
+        {
+          "text": "watch family",
+          "link": "/questions/5-watch-family/README"
+        },
+        {
+          "text": "shallow ref",
+          "link": "/questions/6-shallow-ref/README"
+        },
+        {
+          "text": "Dependency Injection",
+          "link": "/questions/9-dependency-injection/README"
+        },
+        {
+          "text": "effectScope API",
+          "link": "/questions/8-effect-scope/README"
+        },
+        {
+          "text": "custom ref",
+          "link": "/questions/23-custom-ref/README"
+        }
+      ]
+    },
+    {
+      "text": "Directives",
+      "items": [
+        {
+          "text": "Optimize performance directive",
+          "link": "/questions/12-optimize-perf-directive/README"
+        },
+        {
+          "text": "v-focus",
+          "link": "/questions/19-v-focus/README"
+        },
+        {
+          "text": "v-debounce-click",
+          "link": "/questions/20-v-debounce-click/README"
+        },
+        {
+          "text": "v-active-style",
+          "link": "/questions/24-v-active-style/README"
+        },
+        {
+          "text": "v-model",
+          "link": "/questions/26-v-model/README"
+        }
+      ]
+    },
+    {
+      "text": "Global API:General",
+      "items": [
+        {
+          "text": "Next DOM update flush",
+          "link": "/questions/11-next-dom-update/README"
+        }
+      ]
+    },
+    {
+      "text": "Lifecycle",
+      "items": [
+        {
+          "text": "Lifecycle Hooks",
+          "link": "/questions/10-lifecycle/README"
+        }
+      ]
+    },
+    {
+      "text": "Reactivity:Advanced",
+      "items": [
+        {
+          "text": "shallow ref",
+          "link": "/questions/6-shallow-ref/README"
+        },
+        {
+          "text": "Raw API",
+          "link": "/questions/7-raw-api/README"
+        },
+        {
+          "text": "effectScope API",
+          "link": "/questions/8-effect-scope/README"
+        },
+        {
+          "text": "custom ref",
+          "link": "/questions/23-custom-ref/README"
+        }
+      ]
+    },
+    {
+      "text": "Reactivity:Core",
+      "items": [
+        {
+          "text": "ref family",
+          "link": "/questions/2-ref-family/README"
+        },
+        {
+          "text": "writable-computed",
+          "link": "/questions/4-writable-computed/README"
+        },
+        {
+          "text": "watch family",
+          "link": "/questions/5-watch-family/README"
+        }
+      ]
+    },
+    {
+      "text": "Reactivity:Utilities",
+      "items": [
+        {
+          "text": "losing-reactivity",
+          "link": "/questions/3-losing-reactivity/README"
+        }
+      ]
+    },
+    {
+      "text": "Utility Function",
+      "items": [
+        {
+          "text": "until",
+          "link": "/questions/16-until/README"
+        }
+      ]
+    },
+    {
+      "text": "Web Components",
+      "items": [
+        {
+          "text": "custom element",
+          "link": "/questions/22-custom-element/README"
+        }
+      ]
+    }
+  ]
+}

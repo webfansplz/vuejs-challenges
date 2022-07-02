@@ -1,0 +1,22 @@
+{
+  "author": "webfansplz",
+  "description": "",
+  "devDependencies": {
+    "@vueuse/core": "^8.7.5",
+    "fuse.js": "^6.6.2",
+    "unocss": "^0.42.0",
+    "unplugin-vue-components": "^0.21.0",
+    "vite": "^2.9.13",
+    "vitepress": "1.0.0-alpha.4",
+    "vue": "^3.2.37"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "vitepress build .",
+    "dev": "vitepress dev . --host",
+    "serve": "vitepress serve . --port 5001",
+    "update": "tsx ./scripts/update.ts"
+  }
+}

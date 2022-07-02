@@ -1,4 +1,6 @@
 {
+  "name": "@vuejs-challenges/scripts",
+  "version": "1.0.0",
   "dependencies": {
     "@actions/core": "^1.2.7",
     "@actions/github": "^4.0.0",
@@ -10,7 +12,5 @@
     "limax": "^2.1.0",
     "tsx": "^3.6.0"
   },
-  "name": "@vuejs-challenges/scripts",
-  "private": true,
-  "version": "1.0.0"
+  "private": true
 }
