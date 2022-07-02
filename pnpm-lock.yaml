@@ -32,6 +32,7 @@ importers:
     specifiers:
       '@vueuse/core': ^8.7.5
       fuse.js: ^6.6.2
+      sass: ^1.53.0
       unocss: ^0.42.0
       unplugin-vue-components: ^0.21.0
       vite: ^2.9.13
@@ -40,10 +41,11 @@ importers:
     devDependencies:
       '@vueuse/core': 8.7.5_vue@3.2.37
       fuse.js: 6.6.2
+      sass: 1.53.0
       unocss: 0.42.0_vite@2.9.13
       unplugin-vue-components: 0.21.0_vite@2.9.13+vue@3.2.37
-      vite: 2.9.13
-      vitepress: 1.0.0-alpha.4
+      vite: 2.9.13_sass@1.53.0
+      vitepress: 1.0.0-alpha.4_sass@1.53.0
       vue: 3.2.37
 
 packages:
@@ -837,7 +839,7 @@ packages:
       '@unocss/scope': 0.42.0
       '@unocss/transformer-directives': 0.42.0
       magic-string: 0.26.2
-      vite: 2.9.13
+      vite: 2.9.13_sass@1.53.0
     dev: true
 
   /@vitejs/plugin-vue/2.3.3_vite@2.9.13+vue@3.2.37:
@@ -847,7 +849,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.13
+      vite: 2.9.13_sass@1.53.0
       vue: 3.2.37
     dev: true
 
@@ -2391,6 +2393,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable/4.1.0:
+    resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
+    dev: true
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -3110,6 +3116,16 @@ packages:
       regexp-tree: 0.1.24
     dev: true
 
+  /sass/1.53.0:
+    resolution: {integrity: sha512-zb/oMirbKhUgRQ0/GFz8TSAwRq2IlR29vOUJZOx0l8sV+CkHUfHa4u5nqrG+1VceZp7Jfj59SVW9ogdhTvJDcQ==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.1.0
+      source-map-js: 1.0.2
+    dev: true
+
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
@@ -3472,7 +3488,7 @@ packages:
     dependencies:
       acorn: 8.7.1
       chokidar: 3.5.3
-      vite: 2.9.13
+      vite: 2.9.13_sass@1.53.0
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.4
     dev: true
@@ -3505,7 +3521,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/2.9.13:
+  /vite/2.9.13_sass@1.53.0:
     resolution: {integrity: sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -3525,11 +3541,12 @@ packages:
       postcss: 8.4.14
       resolve: 1.22.1
       rollup: 2.75.7
+      sass: 1.53.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.4:
+  /vitepress/1.0.0-alpha.4_sass@1.53.0:
     resolution: {integrity: sha512-bOAA4KW6vYGlkbcrPLZLTKWTgXVroObU+o9xj9EENyEl6yg26WWvfN7DGA4BftjdM5O8nR93Z5khPQ3W/tFE7Q==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -3541,7 +3558,7 @@ packages:
       '@vueuse/core': 8.7.5_vue@3.2.37
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.10.1
-      vite: 2.9.13
+      vite: 2.9.13_sass@1.53.0
       vue: 3.2.37
     transitivePeerDependencies:
       - '@algolia/client-search'
