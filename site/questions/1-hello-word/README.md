@@ -6,7 +6,7 @@ In Vue.js Challenges, we use the Vue.js SFC Playground based on [vuejs/repl](htt
 
 For this challenge, you will need to change the following code to make the page show "Hello World" correctly.
 
-```ts
+```vue
 <script setup>
 import { ref } from "vue"
 const msg = ref("Hello World")

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { challengesByDifficulty } from "../../meta"
 
-console.log(challengesByDifficulty)
 </script>
 
 <template>

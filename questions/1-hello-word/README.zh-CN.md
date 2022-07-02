@@ -6,7 +6,7 @@ Hello，World！
 
 对于这个挑战，您将需要更改以下代码，以使页面正确显示“Hello World”。
 
-```ts
+```vue
 <script setup>
 import { ref } from "vue"
 const msg = ref("Hello World")
