@@ -1,9 +1,9 @@
 {
   "name": "vuejs-challenges",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "license": "ISC",
+  "description": "Collection of Vue.js challenges",
+  "keywords": ["Vue.js challenges", "Vue.js", "challenges", "Learn Vue.js"],
+  "license": "MIT",
+  "private":true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/webfansplz/vuejs-challenges.git"
