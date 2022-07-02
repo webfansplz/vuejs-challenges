@@ -5,7 +5,7 @@ The `debounce function` is so useful in the input box manipulation scenarios.
 
 A `debounced ref` is even more flexible in `Vue.js`, let's go 👇: 
 
-```ts
+```vue
 <script setup>
 import { watch } from "vue"
 

@@ -8,7 +8,7 @@ In `Vue.js`, We also destructure/spread the `reactive` object,but it'll losing t
 How to make ensure the destructure without losing reactivity ? Go ! 
 
 
-```ts
+```vue
 <script setup lang="ts">
 import { reactive } from "vue"
 

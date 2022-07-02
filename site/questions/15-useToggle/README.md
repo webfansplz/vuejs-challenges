@@ -4,7 +4,7 @@
 For this challenge, we'll start write composable function. Let's start with `useToggle` 👇: 
 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 /**

@@ -4,7 +4,7 @@
 我们经常需要使用`localStorage`API，一个好用的可组合函数封装将帮助我们更好地使用它，让我们开始吧 👇: 
 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 import { ref } from "vue"

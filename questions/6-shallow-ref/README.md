@@ -4,7 +4,7 @@
 For this challenge, you'll use `Reactivity API: shallowRef` to finish it. 
 Here's what you need to implement 👇: 
 
-```ts
+```vue
 <script setup lang="ts">
 import { shallowRef, watch } from "vue"
 

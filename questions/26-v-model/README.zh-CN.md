@@ -3,7 +3,7 @@
 
 在这个挑战中，我们将尝试实现一个简单的`v-model`指令，让我们开始吧 👇: 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 import { ref } from "vue"

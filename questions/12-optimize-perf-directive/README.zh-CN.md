@@ -5,7 +5,7 @@
 
 你知道它是什么吗 ? 让我们试试👇:
 
-```ts
+```vue
 <script setup>
 import { ref } from "vue"
 

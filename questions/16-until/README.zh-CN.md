@@ -4,7 +4,7 @@
 有些时候，我们需要依赖于异步的返回结果做一些后续处理，`until`函数在这种场景下非常有用，你能实现它吗 ? 让我们来试试吧 👇:
 
 
-```ts
+```vue
 <script setup lang='ts'>
 import { ref } from "vue"
 

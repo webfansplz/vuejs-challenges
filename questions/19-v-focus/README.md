@@ -3,7 +3,7 @@
 
 For this challenge, we'll start write custom directive. Let's start with `v-focus` 👇: 
 
-```ts
+```vue
 <script setup lang='ts'>
 import { ref } from "vue"
 

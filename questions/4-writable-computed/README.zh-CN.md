@@ -3,7 +3,7 @@
 
 在这个挑战中，你需要创建一个可写的计算属性 :
 
-```ts
+```vue
 <script setup lang="ts">
 import { ref, computed } from "vue"
 

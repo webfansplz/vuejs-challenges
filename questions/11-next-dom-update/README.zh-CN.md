@@ -4,7 +4,7 @@
 在`Vue.js`中改变响应式状态时，DOM不会同步更新。 
 `Vue.js` 提供了一个用于等待下一次DOM更新的方法，让我们开始吧 👇: 
 
-```ts
+```vue
 <script setup>
 import { ref } from "vue"
 

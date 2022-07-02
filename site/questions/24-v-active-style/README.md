@@ -3,7 +3,7 @@
 
 For this challenge, we're going to implement a active-style-directive, let's go 👇: 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 import { ref } from "vue"

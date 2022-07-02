@@ -3,7 +3,7 @@
 
 For this challenge, you need to creating a writable computed ref : 
 
-```ts
+```vue
 <script setup lang="ts">
 import { ref, computed } from "vue"
 

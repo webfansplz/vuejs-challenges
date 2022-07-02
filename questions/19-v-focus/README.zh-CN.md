@@ -3,7 +3,7 @@
 
 这个挑战开始，我们将尝试编写自定义指令，让我们从`v-focus`开始 👇:
 
-```ts
+```vue
 <script setup lang='ts'>
 import { ref } from "vue"
 

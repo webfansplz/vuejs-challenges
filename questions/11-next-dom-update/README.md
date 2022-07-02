@@ -5,7 +5,7 @@ When you mutate reactive state in `Vue.js`, the resulting DOM updates are not ap
 
 `Vue.js` provides a utility for waiting for the next DOM update flush, Let's Go 👇: 
 
-```ts
+```vue
 <script setup>
 import { ref } from "vue"
 

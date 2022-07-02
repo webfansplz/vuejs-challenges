@@ -4,7 +4,7 @@
 在这个挑战中，你将使用 `组合式 API: 依赖注入` 来完成它。
 以下是你要实现的内容 👇: 
 
-```ts
+```vue
 // Child.vue 
 
 <script setup lang="ts">

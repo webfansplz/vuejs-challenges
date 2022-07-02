@@ -4,7 +4,7 @@
 For this challenge, you'll use `Reactivity API: effectScope` to finish it. 
 Here's what you need to implement 👇: 
 
-```ts
+```vue
 <script setup lang="ts">
 import { ref, computed, watch, watchEffect } from "vue"
 

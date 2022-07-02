@@ -5,7 +5,7 @@ SFC `<style>` tags support linking CSS values to dynamic component.
 
 Do you know what's it, Let's try it 👇: 
 
-```ts
+```vue
 <script setup>
 import { ref } from "vue"
 const theme = ref("red")
