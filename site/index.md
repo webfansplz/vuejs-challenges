@@ -10,7 +10,7 @@ hero:
   text: Collection of Vue.js challenges
   tagline: A Vue.js online challenge platform
   image:
-    src: /logo.png
+    src: public/logo.png
     alt: Vue.js challenges
   actions:
     - theme: brand
