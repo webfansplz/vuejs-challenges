@@ -27,7 +27,7 @@ features:
   - title: Online Play
     details: Take the challenges based on the online Vue.js SFC Playground
   - title: Wide Coverage
-    details: Reactivity API,Composable Function,Directives,Components ...
+    details: Reactivity API,Composable Function,Directives,Components
   - title: Difficulty level
     details: You can choose the challenge from different levels of difficulty
   - title: Automated contribution
