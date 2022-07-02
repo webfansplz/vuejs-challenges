@@ -7,7 +7,7 @@ Vue 能很好地解析和创建 `Web Components` 。
 
 在这个挑战中，我们将尝试了解它，让我们开始吧 👇: 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 import { onMounted } from "vue"

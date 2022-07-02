@@ -4,7 +4,7 @@
 We often need to use the `localStorage` API, A composable function will help us better use it, Let's go. 👇: 
 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 import { ref } from "vue"

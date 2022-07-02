@@ -4,7 +4,7 @@
 在这个挑战中，我们将实现一个计数器。 👇: 
 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 interface UseCounterOptions {

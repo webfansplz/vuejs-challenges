@@ -4,7 +4,7 @@
 For this challenge, we're going to implement a counter. 👇: 
 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 interface UseCounterOptions {

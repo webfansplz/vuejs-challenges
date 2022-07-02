@@ -4,7 +4,7 @@
 在这个挑战中，你将使用 `组合式 API: 生命周期钩子` 来完成它。
 以下是你要实现的内容 👇: 
 
-```ts
+```vue
 // Child.vue
 
 <script setup lang="ts">

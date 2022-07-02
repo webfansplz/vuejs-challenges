@@ -4,7 +4,7 @@
 在使用`Vue.js`时，我们应该关注可复用性，可组合函数是一个很好的方式，让我们开始吧 👇: 
 
 
-```ts
+```vue
 <script setup lang="ts">
 
 // Implement ...

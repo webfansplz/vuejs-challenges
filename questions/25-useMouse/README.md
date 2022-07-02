@@ -4,7 +4,7 @@
 We should focus on Reusability when use `Vue.js`,Composables functions are a good way,let's go 👇: 
 
 
-```ts
+```vue
 <script setup lang="ts">
 
 // Implement ...

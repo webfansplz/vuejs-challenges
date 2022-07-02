@@ -5,7 +5,7 @@
 
 在这个挑战中，我们将实现一个"激活的样式"指令，让我们开始吧 👇: 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 import { ref } from "vue"

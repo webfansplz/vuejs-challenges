@@ -3,7 +3,7 @@
 
 这个挑战开始,我们将尝试编写可组合函数，让我们从`useToggle`开始 👇:
 
-```ts
+```vue
 <script setup lang='ts'>
 
 /**

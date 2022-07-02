@@ -7,7 +7,7 @@
 
 如何保证解构/扩展不丢失响应性 ? 让我们开始吧 ！
 
-```ts
+```vue
 <script setup lang="ts">
 import { reactive } from "vue"
 

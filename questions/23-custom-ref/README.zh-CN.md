@@ -5,7 +5,7 @@
 
 一个 防抖的`ref`在`Vue.js`更加灵活，让我们开始吧 👇: 
 
-```ts
+```vue
 <script setup>
 import { watch } from "vue"
 

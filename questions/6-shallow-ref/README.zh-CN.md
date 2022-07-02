@@ -4,7 +4,7 @@
 在这个挑战中，你将使用 `响应式 API: shallowRef` 来完成它。
 以下是你要实现的内容 👇: 
 
-```ts
+```vue
 <script setup lang="ts">
 import { shallowRef, watch } from "vue"
 

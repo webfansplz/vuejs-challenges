@@ -7,7 +7,7 @@ Vue has excellent support for both consuming and creating custom elements.
 
 For this challenge,you can try it out,let's go 👇: 
 
-```ts
+```vue
 <script setup lang='ts'>
 
 import { onMounted } from "vue"

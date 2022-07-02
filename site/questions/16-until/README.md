@@ -4,7 +4,7 @@
 We always need to rely on the asynchronous return result to do something, and the `until` function is so useful in this case, Can you do it? Let's try it 👇:
 
 
-```ts
+```vue
 <script setup lang='ts'>
 import { ref } from "vue"
 

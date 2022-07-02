@@ -32,14 +32,8 @@ const nav = [
 export default defineConfig({
   title: "Vue.js challenges",
   description: "Collection of Vue.js challenges",
-  appearance: false,
+  // appearance: false,
   lastUpdated: true,
-  markdown: {
-    theme: {
-      light: "vitesse-light",
-      dark: "vitesse-dark",
-    },
-  },
   themeConfig: {
     sidebar: {
       "/challenges": navMenu,

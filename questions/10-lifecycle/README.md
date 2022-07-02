@@ -4,7 +4,7 @@
 For this challenge, you'll use `Composition API: Lifecycle Hooks` to finish it. 
 Here's what you need to implement 👇: 
 
-```ts
+```vue
 // Child.vue
 
 <script setup lang="ts">
