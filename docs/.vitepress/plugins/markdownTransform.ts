@@ -1,6 +1,8 @@
 import path from "path"
 import type { Plugin } from "vite"
-import { REPO } from "../../../scripts/configs"
+
+const HOST = "https://cn-vuejs-challenges.netlify.app"
+
 export function MarkdownTransform(): Plugin {
   return {
     name: "vueuse-md-transform",
@@ -19,7 +21,7 @@ export function MarkdownTransform(): Plugin {
       )
 
       const pathInfo = path.parse(path.relative(process.cwd(), id))
-      const host = `${REPO}/blob/main/${path.join(pathInfo.dir, "README.zh-CN.md")}`
+      const host = `${HOST}/${path.join(pathInfo.dir, "README.zh-CN")}`
       const replaceContent = `<a href=\"${host}" target=\"_blank\"><img src=\"https://img.shields.io/badge/-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-gray\" alt=\"简体中文\"/></a>`
 
       code = code.replace(backbadegeRegexp, "").replace(chinesebadegeRegexp, replaceContent)
