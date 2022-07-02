@@ -3,8 +3,8 @@
   NODE_VERSION = "16"
 
 [build]
-  publish = "site/.vitepress/dist"
-  command = "npx pnpm i --store=node_modules/.pnpm-store && npm run site:build"
+  publish = "docs/.vitepress/dist"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npm run docs:build"
 
 [[redirects]]
   from = "/*"
