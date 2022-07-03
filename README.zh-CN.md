@@ -47,7 +47,9 @@ Vue.js 挑战合集
 
 ## 🌸 感谢
 
-这个项目的灵感来自于 [type-challenges](https://github.com/type-challenges/type-challenges) ♥️。
+这个项目的灵感和实现大多来自于 [type-challenges](https://github.com/type-challenges/type-challenges) ♥️。
+
+[vuejs/repl](https://github.com/vuejs/repl) 让这个项目成为了可能 ♥️。
 
 ## 📄 License
 
