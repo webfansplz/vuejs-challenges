@@ -99,8 +99,8 @@ const action: Action = async(github, context, core) => {
         [locale]: info,
       },
       readme: {
-        "en": `<!--info-header-start-->\n<!--info-header-end-->\n${normalizedTemplate}\n<!--info-footer-start-->\n<!--info-footer-end-->\n`,
-        "zh-CN": `<!--info-header-start-->\n<!--info-header-end-->\n${normalizedTemplate}\n<!--info-footer-start-->\n<!--info-footer-end-->\n`,
+        [locale]: `<!--info-header-start-->\n<!--info-header-end-->\n${template}\n<!--info-footer-start-->\n<!--info-footer-end-->\n`,
+        [anotherLocale]: `<!--info-header-start-->\n<!--info-header-end-->\n${normalizedTemplate}\n<!--info-footer-start-->\n<!--info-footer-end-->\n`,
       },
       quizLink: normalizeSFCLink(question),
     }
