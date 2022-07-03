@@ -23,6 +23,14 @@ title: 你的题目
 tags: union, array # separate by comma
 ```
 
+## 题目
+
+<!--question-start-->
+
+在这里描述你的题目并给出一些例子。支持使用 Markdown。
+
+<!--question-end-->
+
 ## 题目模版
 
 以下是给予挑战者开始做题的代码模版，

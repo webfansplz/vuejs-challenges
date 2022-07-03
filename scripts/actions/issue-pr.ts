@@ -1,6 +1,7 @@
 import YAML from "js-yaml"
 import slug from "limax"
 import { PushCommit } from "@type-challenges/octokit-create-pull-request"
+import translate from "google-translate-open-api"
 import { Action, Context, Github, Quiz } from "../types"
 import { normalizeSFCLink } from "../loader"
 import { resolveFilePath } from "../utils"
@@ -10,6 +11,7 @@ import { t } from "../locales"
 const Messages = {
   "en": {
     info: "Info",
+    question: "Question",
     template: "Template",
     issue_reply: "#{0} - Pull Request created.",
     issue_update_reply: "#{0} - Pull Request updated.",
@@ -19,6 +21,7 @@ const Messages = {
   },
   "zh-CN": {
     info: "基本信息",
+    question: "题目",
     template: "题目模版",
     issue_reply: "#{0} - PR 已生成",
     issue_update_reply: "#{0} - PR 已更新",
@@ -46,6 +49,7 @@ const action: Action = async(github, context, core) => {
 
     const body = issue.body || ""
     const infoRaw = getCodeBlock(body, Messages[locale].info, "yaml")
+    const template = cleanTemplateWrapper(getCommentRange(body, "question")?.[0] ?? "")
     const question = getChallengesContent(body)
 
     let info: any
@@ -61,7 +65,7 @@ const action: Action = async(github, context, core) => {
     core.info(JSON.stringify(context.payload, null, 2))
 
     // invalid issue
-    if (!question || !info) {
+    if (!question || !info || !template) {
       await updateComment(
         github,
         context,
@@ -85,6 +89,9 @@ const action: Action = async(github, context, core) => {
     core.info(`user: ${JSON.stringify(user)}`)
     core.info(`info: ${JSON.stringify(info)}`)
 
+    const anotherLocale = locale === "zh-CN" ? "en" : "zh-CN"
+    const normalizedTemplate = await translateContent(template, locale, anotherLocale)
+
     const quiz: Quiz = {
       no,
       path: "",
@@ -92,8 +99,8 @@ const action: Action = async(github, context, core) => {
         [locale]: info,
       },
       readme: {
-        "en": "<!--info-header-start-->\n<!--info-header-end-->\n<!--info-footer-start-->\n<!--info-footer-end-->\n",
-        "zh-CN": "<!--info-header-start-->\n<!--info-header-end-->\n<!--info-footer-start-->\n<!--info-footer-end-->\n",
+        "en": `<!--info-header-start-->\n<!--info-header-end-->\n${normalizedTemplate}\n<!--info-footer-start-->\n<!--info-footer-end-->\n`,
+        "zh-CN": `<!--info-header-start-->\n<!--info-header-end-->\n${normalizedTemplate}\n<!--info-footer-start-->\n<!--info-footer-end-->\n`,
       },
       quizLink: normalizeSFCLink(question),
     }
@@ -127,15 +134,12 @@ const action: Action = async(github, context, core) => {
       return files
     }
 
-    const anotherLocale = locale === "zh-CN" ? "en" : "zh-CN"
+    const normalizedTitle = await translateContent(info.title, locale, anotherLocale)
     const files: Record<string, string> = {
       [resolveFilePath(dir, "info", "yml", locale)]: `${YAML.dump(info)}\n`,
       [resolveFilePath(dir, "info", "yml", anotherLocale)]: `${YAML.dump({
         ...info,
-        title: slug(
-          info.title.replace(/\./g, "-").replace(/<.*>/g, ""),
-          { tone: false },
-        ),
+        title: normalizedTitle,
       })}\n`,
       [resolveFilePath(dir, "README", "md", locale)]: quiz.readme.en,
       [resolveFilePath(dir, "README", "md", anotherLocale)]: quiz.readme["zh-CN"],
@@ -287,6 +291,20 @@ function getTimestampBadge() {
   return `![${new Date().toISOString()}](https://img.shields.io/date/${Math.round(
     +new Date() / 1000,
   )}?color=green&label=)`
+}
+
+function cleanTemplateWrapper(str: string) {
+  return str.replace(/<!--question-start-->([\s\S]*?)<!--question-end-->/, "$1")
+}
+
+async function translateContent(content: string, from = "zh-CN", to = "en") {
+  const { data } = await translate(content.split(/\n/), {
+    tld: "com",
+    from,
+    to,
+    client: "dict-chrome-ex",
+  })
+  return data.join("\n")
 }
 
 export default action
