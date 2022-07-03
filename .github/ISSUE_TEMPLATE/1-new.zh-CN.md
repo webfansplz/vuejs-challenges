@@ -27,7 +27,7 @@ tags: union, array # separate by comma
 
 <!--question-start-->
 
-在这里描述你的题目并给出一些例子。支持使用 Markdown。
+在这里描述并说明你的题目。
 
 <!--question-end-->
 

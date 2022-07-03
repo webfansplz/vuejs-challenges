@@ -24,7 +24,7 @@ tags: Directvies, Components # separate by comma
 
 <!--question-start-->
 
-Describe your question and give some examples. Markdown is supported here. 
+Describe and explain your question here. 
 
 <!--question-end-->
 
