@@ -141,8 +141,8 @@ const action: Action = async(github, context, core) => {
         ...info,
         title: normalizedTitle,
       })}\n`,
-      [resolveFilePath(dir, "README", "md", locale)]: quiz.readme.en,
-      [resolveFilePath(dir, "README", "md", anotherLocale)]: quiz.readme["zh-CN"],
+      [resolveFilePath(dir, "README", "md", locale)]: quiz.readme[locale],
+      [resolveFilePath(dir, "README", "md", anotherLocale)]: quiz.readme[anotherLocale],
       ...transformQuizToFiles(question),
     }
 
