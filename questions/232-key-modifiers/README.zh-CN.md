@@ -2,14 +2,14 @@
 <!--info-header-end-->
 
 
-<i>When listening for keyboard events, we often need to check for specific keys.</i><b>在收听键盘事件时，我们通常需要检查特定的键。</b> <i>Vue allows adding key modifiers for v-on or @ when listening for key events,eg :</i> <b>VUE允许在收听关键事件时为V-ON或 @添加密钥修饰符，例如：</b>
+在监听键盘事件时，我们经常需要检查特定的按键。Vue 允许为 v-on 或者 @ 在监听键盘事件时添加按键修饰符：，例如：
 
-``VUE
-<!-- only call `vm.submit()` when the `key` is `Enter` -->
+``vue
+<!-- 只有在 `key` 是 `Enter` 时调用 `vm.submit()` -->
 <input @keyup.enter="submit" />
 ````````
 
-为了解决这个挑战，我们将尝试一些事情，让我们走吧：
+在这个挑战中，我们将尝试它，让我们开始吧：
 
 
 <!--info-footer-start-->
