@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue"
-import Child from "./Child.vue"
+import TreeComponent from "./TreeComponent.vue"
 const treeData = ref([{
   key: '1',
   title: 'Parent 1',
