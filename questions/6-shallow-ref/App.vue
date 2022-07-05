@@ -11,7 +11,8 @@ watch(state, () => {
 /**
  * Modify the code so that make the watch callback trigger.
 */
-state.value.count = 2
+// state.value.count = 2
+state.value = { count: 2 }
 
 </script>
 

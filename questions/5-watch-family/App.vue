@@ -7,8 +7,9 @@ const count = ref(0)
  * Challenges 1: Watch once
  * Make sure the watch callback only trigger once
 */
-watch(count, () => {
+const unwatch = watch(count, () => {
   console.log("Only triggered once")
+  unwatch()
 })
 
 count.value = 1
@@ -22,7 +23,7 @@ const state = ref({
   count: 0,
 })
 
-watch(state, () => {
+watch(state.value, () => {
   console.log("The state.count updated")
 })
 
@@ -37,6 +38,8 @@ const eleRef = ref()
 const age = ref(2)
 watch(age, () => {
   console.log(eleRef.value)
+}, {
+  flush: 'post'
 })
 age.value = 18
 

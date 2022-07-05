@@ -9,5 +9,5 @@ setInterval(() => {
 </script>
 
 <template>
-  <span>Make it never change: {{ count }}</span>
+  <span v-once>Make it never change: {{ count }}</span>
 </template>

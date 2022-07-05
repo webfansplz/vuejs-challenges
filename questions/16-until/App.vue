@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { ref } from "vue"
+import { ref, watch } from "vue"
 
 const count = ref(0)
 
@@ -9,7 +9,14 @@ const count = ref(0)
 
 function until(initial) {
   function toBe(value) {
-
+    return new Promise((resolve, reject) => {
+      const unwatch = watch(initial, (newValue) => {
+        if(newValue === value) {
+          unwatch()
+          resolve(value)
+        }
+      })
+    })
   }
 
   return {

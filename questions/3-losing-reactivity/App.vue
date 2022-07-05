@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive } from "vue"
+import { reactive, toRefs } from "vue"
 
 function useCount() {
   const state = reactive({
@@ -11,7 +11,7 @@ function useCount() {
   }
 
   return {
-    state,
+    state: toRefs(state),
     update,
   }
 }

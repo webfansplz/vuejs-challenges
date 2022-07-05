@@ -17,6 +17,6 @@ setInterval(() => {
 <style scoped>
 /* Modify the code to bind the dynamic color */
 p {
-  color: red
+  color: v-bind(theme)
 }
 </style>

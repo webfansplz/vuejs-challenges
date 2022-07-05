@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, inject } from "vue"
+import { onMounted, onUnmounted, inject } from "vue"
 
 const timer = inject("timer")
 const count = inject("count")
@@ -10,6 +10,9 @@ onMounted(() => {
   }, 1000)
 })
 
+onUnmounted(() => {
+  clearInterval()
+})
 </script>
 
 <template>
