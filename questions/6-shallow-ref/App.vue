@@ -9,7 +9,7 @@ watch(state, () => {
 }, { deep: true })
 
 /**
- * Modify the code so that make the watch callback trigger.
+ * Modify the code so that we can make the watch callback trigger.
 */
 state.value.count = 2
 

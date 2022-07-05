@@ -3,7 +3,7 @@
 
 For this challenge, you need use `h` render function to implement a component. 
 
-Note: you should make sure that the props are passed correctly、event is triggered normally and slot content rendering is normal. let’s go.
+Note: You should make sure that the props are passed correctly, event is triggered correctly and the slot content is rendered correctly. Lets go.
 
 ```vue
 <script setup lang="ts">

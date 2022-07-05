@@ -4,7 +4,7 @@ import { ref } from "vue"
 
 /**
  * Implement the composable function
- * Make the function work fine
+ * Make sure the function works correctly
 */
 function useLocalStorage(key: string, initialValue: any) {
   const value = ref(initialValue)
@@ -14,10 +14,10 @@ function useLocalStorage(key: string, initialValue: any) {
 
 const counter = useLocalStorage("counter", 0)
 
-// We can get localStorage via triggered the getter:
+// We can get localStorage by triggering the getter:
 console.log(counter.value)
 
-// And We also can set localStorage via triggered the setter:
+// And we can also set localStorage by triggering the setter:
 
 counter.value = 1
 

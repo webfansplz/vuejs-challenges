@@ -16,7 +16,7 @@ function useCount() {
   }
 }
 
-// Make ensure the destructure without losing reactivity
+// Ensure the destructured properties don't lose their reactivity
 const { state: { count }, update } = useCount()
 
 </script>

@@ -2,8 +2,8 @@
 
 /**
  * Implement the custom directive
- * Make sure the `onClick` method only triggered once when clicked many times quicky
- * And you need to support the debounce delay time option. e.g `v-debounce-click:ms`
+ * Make sure the `onClick` method only gets triggered once when clicked many times quickly
+ * And you also need to support the debounce delay time option. e.g `v-debounce-click:ms`
  *
 */
 
@@ -12,7 +12,7 @@ const VDebounceClick = {
 }
 
 function onClick() {
-  console.log("Only triggered once when clicked many times quicky")
+  console.log("Only triggered once when clicked many times quickly")
 }
 
 </script>

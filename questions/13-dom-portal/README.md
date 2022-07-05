@@ -3,7 +3,7 @@
 
 `Vue.js` provides a built-in component that renders its slot content to another part of the `DOM`. 
 
-Do you know what's it, Let's try it 👇: 
+Do you know the built-in component?. Lets try it 👇: 
 
 ```vue
 <script setup>
@@ -13,7 +13,7 @@ const msg = "Hello World"
 </script>
 
 <template>
-  <!-- Renders its to a child element of the `body` -->
+  <!-- Renders it to a child element of the `body` -->
   <span>{{ msg }}</span>
 </template>
 

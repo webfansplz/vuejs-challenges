@@ -10,8 +10,8 @@ function update(value) {
 }
 
 /**
- * Challenge 2: Checks if `count` is a ref object.
- * Make the output to be 1
+ * Challenge 2: Check if the `count` is a ref object.
+ * Make the output be 1
 */
 console.log(
   // impl ? 1 : 0
@@ -19,10 +19,10 @@ console.log(
 
 /**
  * Challenge 3: Unwrap ref
- * Make the output to be true
+ * Make the output be true
 */
 function initialCount(value: number | Ref<number>) {
-  // Make the output to be true
+  // Make the output be true
   console.log(value === 10)
 }
 
@@ -33,7 +33,7 @@ initialCount(initial)
  * create a ref for a property on a source reactive object.
  * The created ref is synced with its source property:
  * mutating the source property will update the ref, and vice-versa.
- * Make the output to be true
+ * Make the output be true
 */
 const state = reactive({
   foo: 1,

@@ -7,8 +7,8 @@ function increment() {
   count.value++
 
   /**
-   * DOM not yet updated, how to make sure the DOM udpated
-   * Make the output to be true
+   * DOM is not yet updated, how to can we make sure that the DOM gets updated
+   * Make the output be true
   */
 
   console.log(+document.getElementById("counter").textContent === 1)
