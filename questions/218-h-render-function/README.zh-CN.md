@@ -1,8 +1,23 @@
 <!--info-header-start-->
 <!--info-header-end-->
 
+在这个挑战中，你需要使用`h`渲染函数来实现一个组件。
 
-<i>For this challenge, you need use `h` render function implement a component.</i><b>在此挑战中，您需要使用`h` h`渲染函数实现组件。</b> <i>It is important to note that: you must make sure that the props are passed correctly、event triggered normally and slot content rendering is normal.</i><b>重要的是要注意：您必须确保正常触发道具的事件正确传递，并且插槽内容渲染是正常的。</b> <i>let&#39;s go.</i><b>我们走吧。</b>
+请注意: 你应该确保参数被正确传递、事件被正常触发和插槽内容正常渲染。让我们开始吧。
+
+```vue
+<script setup lang="ts">
+import MyButton from "./MyButton.ts"
+const onClick = () => {
+  console.log('onClick')
+}
+</script>
+<template>
+  <MyButton :disabled="false" @custom-click="onClick">
+    my button
+  </MyButton>
+</template>
+```
 
 
 <!--info-footer-start-->
