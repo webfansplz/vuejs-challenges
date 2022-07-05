@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import MyButton from "./MyButton.ts"
 
-const myDoubleClick = () => {
-  console.log('myDoubleClick')
+const onClick = () => {
+  console.log('onClick')
 }
 
 </script>
 
 <template>
-  <MyButton disabled @myDoubleClick="myDoubleClick">
-    this is my button
+  <MyButton :disabled="false" @custom-click="onClick">
+    my button
   </MyButton>
 </template>
