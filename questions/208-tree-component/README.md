@@ -2,4 +2,19 @@
 
 For this challenge, you need to implement a tree component,let’s go.
 
+```vue
+<script setup lang="ts">
+interface TreeData {
+  key: string
+  title: string
+  children: TreeData[]
+}
+defineProps<{data: TreeData}>()
+</script>
+
+<template>
+  <!-- do something.... -->
+</template>
+```
+
 <!--info-footer-start--><br><a href="../../README.md" target="_blank"><img src="https://img.shields.io/badge/-Back-grey" alt="Back"/></a> <a href="https://github.com/webfansplz/vuejs-challenges/issues/new?labels=answer,en&template=0-answer.md&title=208%20-%20Tree%20Component" target="_blank"><img src="https://img.shields.io/badge/-Share%20your%20Solutions-teal" alt="Share your Solutions"/></a> <a href="https://github.com/webfansplz/vuejs-challenges/issues?q=label%3A208+label%3Aanswer" target="_blank"><img src="https://img.shields.io/badge/-Check%20out%20Solutions-de5a77?logo=awesome-lists&logoColor=white" alt="Check out Solutions"/></a> <!--info-footer-end-->
