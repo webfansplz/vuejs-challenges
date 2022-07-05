@@ -6,7 +6,7 @@
 ``vue
 <!-- 只有在 `key` 是 `Enter` 时调用 `vm.submit()` -->
 <input @keyup.enter="submit" />
-````````
+```
 
 在这个挑战中，我们将尝试它，让我们开始吧：
 
