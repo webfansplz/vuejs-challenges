@@ -7,7 +7,7 @@ function increment() {
   count.value++
 
   /**
-   * DOM is not yet updated, how to can we make sure that the DOM gets updated
+   * DOM is not yet updated, how can we make sure that the DOM gets updated
    * Make the output be true
   */
 

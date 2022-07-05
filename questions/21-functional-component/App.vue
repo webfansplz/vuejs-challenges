@@ -4,8 +4,8 @@ import { ref } from "vue"
 
 /**
  * Implement a functional component :
- * 1. Render the list elements (ul/li) with list data
- * 2. Change the list item text color to be red when clicked.
+ * 1. Render the list elements (ul/li) with the list data
+ * 2. Change the list item text color to red when clicked.
 */
 const ListComponent = () => {
 }
