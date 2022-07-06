@@ -1,5 +1,10 @@
 import { defaultLocale } from "./locales"
 
+// buffer to ASCII
+const btoa = (data) => {
+  return Buffer.from(data, "binary").toString("base64")
+}
+
 // prefer old unicode hacks for backward compatibility
 // https://base64.guru/developers/javascript/examples/unicode-strings
 export function utoa(data: string): string {
