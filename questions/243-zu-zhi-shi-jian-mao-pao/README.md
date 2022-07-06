@@ -2,29 +2,30 @@
 <!--info-header-end-->
 
 
-In this challenge, you need to stop the execution of the `CLick1` event, let&#39;s start.
+In this challenge,you should make the click event's propagation to be stopped,let's go 👇: 
 
-`` `vue
+
+```vue
 <script setup lang="ts">
 
-const click1 = () =&gt; {{
-console.log (&#39;Click1&#39;)
+const click1 = () => {
+  console.log('click1')
 }
 
-const click2 = () =&gt; {{
-console.log (&#39;click2&#39;)
+const click2 = () => {
+  console.log('click2')
 }
 
 </script>
 
 <template>
-<div @click="click1()">
-<div @click="click2()">
-Click ME
-</div>
-</div>
+  <div @click="click1()">
+   <div @click="click2()">
+     click me
+   </div>
+  </div>
 </template>
-`` `
+```
 
 
 <!--info-footer-start-->
