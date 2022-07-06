@@ -4,7 +4,7 @@ import { ref, computed, watch, watchEffect } from "vue"
 const counter = ref(1)
 const doubled = computed(() => counter.value * 2)
 
-// use `effectScope` API to make these effect stop together after triggered once
+// use the `effectScope` API to make these effects stop together after being triggered once
 
 watch(doubled, () => console.log(doubled.value))
 watchEffect(() => console.log("Count: ", doubled.value))

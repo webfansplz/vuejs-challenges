@@ -23,7 +23,7 @@ async function increase() {
     count.value++
   }, 1000)
   await until(count).toBe(3)
-  console.log(count.value === 3) // Make sure the output to be true
+  console.log(count.value === 3) // Make sure the output is true
 }
 
 </script>

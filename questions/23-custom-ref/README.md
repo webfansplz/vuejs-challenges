@@ -3,7 +3,7 @@
 
 The `debounce function` is so useful in the input box manipulation scenarios.
 
-A `debounced ref` is even more flexible in `Vue.js`, let's go 👇: 
+A `debounced ref` is even more flexible in `Vue.js`. Lets go 👇: 
 
 ```vue
 <script setup>
@@ -18,7 +18,7 @@ function useDebouncedRef(value, delay = 200) {
 const text = useDebouncedRef("hello")
 
 /**
- * Make sure the callback only triggered once when enter multiple times in a certain timeout
+ * Make sure the callback only gets triggered once when entered multiple times in a certain timeout
 */
 watch(text, (value) => {
   console.log(value)

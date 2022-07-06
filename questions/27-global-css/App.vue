@@ -11,7 +11,7 @@ p {
   line-height: 50px;
 }
 
-/* Make it works */
+/* Make it work */
 body {
   width: 100vw;
   height: 100vh;

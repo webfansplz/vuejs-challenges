@@ -3,7 +3,7 @@
 import { ref } from "vue"
 
 /**
- * Implement the custom directive
+ * Implement a custom directive
  * Create a two-way binding on a form input element
  *
 */

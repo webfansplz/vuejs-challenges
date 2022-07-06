@@ -1,8 +1,8 @@
 <script setup lang='ts'>
 
 /**
- * Implement a composable function that toggle state
- * Make the function work fine
+ * Implement a composable function that toggles the state
+ * Make the function work correctly
 */
 function useToggle() {
 

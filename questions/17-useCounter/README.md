@@ -18,7 +18,7 @@ interface UseCounterOptions {
  * 2. dec (-)
  * 3. reset 
  * 4. min & max opotion support
- * Make the function work fine
+ * Make sure the function works correctly
 */
 function useCounter(initialValue = 0, options: UseCounterOptions = {}) {
 
