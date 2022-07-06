@@ -1,5 +1,5 @@
 difficulty: easy
-title: Prevent incident bubbling
+title: prevent event propagation
 tags: Event Handling
 author:
   github: murongg
