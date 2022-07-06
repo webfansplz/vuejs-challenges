@@ -9,7 +9,7 @@ interface TreeData {
   title: string
   children: TreeData[]
 }
-defineProps<{data: TreeData}>()
+defineProps<{data: TreeData[]}>()
 </script>
 
 <template>
