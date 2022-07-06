@@ -2,7 +2,7 @@
 <!--info-header-end-->
 
 
-在这个挑战中，你需要阻止 `click1` 事件的执行，让我们开始吧。
+在这个挑战中，你需要阻点击事件的冒泡，让我们开始吧。
 
 ```vue
 <script setup lang="ts">
