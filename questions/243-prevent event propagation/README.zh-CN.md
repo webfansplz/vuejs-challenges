@@ -1,7 +1,7 @@
 <!--info-header-start--><h1>阻止事件冒泡 <img src="https://img.shields.io/badge/-%E7%AE%80%E5%8D%95-7aad0c" alt="简单"/> <img src="https://img.shields.io/badge/-%23Event%20Handling-999" alt="#Event Handling"/></h1><blockquote><p>By 木荣 <a href="https://github.com/murongg" target="_blank">@murongg</a></p></blockquote><p><a href="https://sfc.vuejs.org/#eNqFjtEKgyAYRl/lw5vqpliXw2J7D2/CScRMJa2b6N2nuWSMoAtB/uPxPyt5GlMusyB3Qi2fBuNghZsNZKf6hhFnGWnZxFQ4XCvrwOXA3zc0yAs0LdZAgMC0FKXUfZ7FJ1kR0HZi19d2/WfTKualGOrEaGTnxD4B6GtY8Nhd3x0L8uJbj1Ne/3IfEWYYxSFU3jg+T3dapb1k+wCXbmrQ" target="_blank"><img src="https://img.shields.io/badge/-%E6%8E%A5%E5%8F%97%E6%8C%91%E6%88%98-213547?logo=vue.js&logoColor=42b883" alt="接受挑战"/></a> &nbsp;&nbsp;&nbsp;<a href="./README.md" target="_blank"><img src="https://img.shields.io/badge/-English-gray" alt="English"/></a> </p><!--info-header-end-->
 
 
-在这个挑战中，你需要阻点击事件的冒泡，让我们开始吧。
+在这个挑战中，你需要阻止点击事件的冒泡，让我们开始吧。
 
 ```vue
 <script setup lang="ts">
