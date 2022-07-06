@@ -2,7 +2,8 @@
 <!--info-header-end-->
 
 
-Please validate the `type` prop of the `Button` component. it's accept the following strings `primary | ghost | dashed | link | text | default` only and the default value is `default`.
+
+请验证`Button`组件的`Prop`类型 ，使它只接收: `primary | ghost | dashed | link | text | default` ，且默认值为`default`。
 
 
 <!--info-footer-start-->
