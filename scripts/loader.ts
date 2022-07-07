@@ -6,6 +6,7 @@ import { serialize } from "./utils"
 import { QUIZ_ROOT, VUE_SFC_PLAYGROUND_URL } from "./configs"
 import type { QuizMetaInfo, Quiz } from "./types"
 import { supportedLocales, defaultLocale, f } from "./locales"
+import { normalizeStackBlitzLink } from "./stackblitz"
 
 export async function loadFile(filepath: string) {
   if (fs.existsSync(filepath))
@@ -73,16 +74,42 @@ export async function loadQuiz(dir: string): Promise<Quiz> {
     })),
   )
 
-  const quizLink = normalizeSFCLink(content.reduce((pre, cur) => ({ ...pre, ...cur }), {}))
+  const normalizedContent = content.reduce((pre, cur) => ({ ...pre, ...cur }), {})
+  const quizLink = normalizeSFCLink(normalizedContent)
+
   const readmePath = path.join(QUIZ_ROOT, dir, "README.md")
   const infoPath = path.join(QUIZ_ROOT, dir, "info.yml")
+  const info = await loadLocaleVariations(infoPath, loadInfo)
+
+  const normalizedFiles = content.reduce((a, b) => ({ ...a, ...b }), {})
+  const hasTests = Object.keys(normalizedFiles).some(item => item.includes(".test.ts"))
+  const testFileName = (Object.keys(normalizedFiles).find(item => item.includes(".test.ts")) ?? "")
+  const stackblitzLinkEN = hasTests
+    ? normalizeStackBlitzLink({
+      title: (info!.en!.title as unknown as string),
+      files: normalizedFiles,
+      openFile: testFileName,
+    })
+    : ""
+
+  const stackblitzLinkCN = hasTests
+    ? normalizeStackBlitzLink({
+      title: (info!["zh-CN"]!.title as unknown as string),
+      files: normalizedFiles,
+      openFile: testFileName,
+    })
+    : ""
 
   return {
     path: dir,
     quizLink,
+    stackblitzLink: {
+      "en": stackblitzLinkEN,
+      "zh-CN": stackblitzLinkCN,
+    },
     no: Number(dir.replace(/^(\d+)-.*/, "$1")),
     readme: await loadLocaleVariations(readmePath, cleanUpREADME),
-    info: await loadLocaleVariations(infoPath, loadInfo),
+    info,
   }
 }
 
