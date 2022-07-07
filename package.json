@@ -11,6 +11,7 @@
   "author": "",
   "main": "index.js",
   "scripts": {
+    "test": "vitest --environment jsdom --ui",
     "build": "tsx ./scripts/build.ts",
     "docs:dev": "pnpm run -C docs update && pnpm run -C docs dev",
     "docs:build": "pnpm run -C docs build",
@@ -26,14 +27,24 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
     "@types/js-yaml": "^4.0.5",
+    "@types/jsdom": "^16.2.14",
     "@types/node": "^18.0.0",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vitest/ui": "^0.17.0",
+    "@vue/test-utils": "^2.0.2",
     "@webfansplz/eslint-config": "^0.1.0",
     "eslint": "^8.18.0",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "js-yaml": "^4.1.0",
+    "jsdom": "^20.0.0",
     "pnpm": "7.3.0",
     "tsx": "^3.6.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "vitest": "^0.17.0",
+    "vue": "^3.2.37"
+  },
+  "stackblitz": {
+    "startCommand": "npm run test"
   }
 }
