@@ -4,7 +4,7 @@ import { ref, computed, watchEffect } from "vue"
 
 /**
  * Implement the custom directive
- * Make sure the list item text color change to be red when toggle the tab
+ * Make sure the list item text color changes to red when the `toggleTab` is toggled
  *
  */
 type Binding = [CSSStyleDeclaration, () => boolean]

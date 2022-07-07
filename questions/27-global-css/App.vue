@@ -11,8 +11,8 @@ p {
   line-height: 50px;
 }
 
-/* Make it works */
-:global(body) {
+/* Make it work */
+body {
   width: 100vw;
   height: 100vh;
   background-color: burlywood;

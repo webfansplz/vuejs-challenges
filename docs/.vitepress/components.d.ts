@@ -9,5 +9,4 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ChallengeList: typeof import('./components/ChallengeList.vue')['default']
   }
-
 }
