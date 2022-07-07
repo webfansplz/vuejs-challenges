@@ -5,7 +5,7 @@ const state = ref(false)
 
 /**
  * Implement the custom directive
- * Make sure the input element will focus/blur when toggle `state` automatically
+ * Make sure the input element focuses/blurs when the 'state' is toggled
  *
 */
 

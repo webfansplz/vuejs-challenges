@@ -7,8 +7,8 @@ function increment() {
   count.value++
 
   /**
-   * DOM not yet updated, how to make sure the DOM udpated
-   * Make the output to be true
+   * DOM is not yet updated, how can we make sure that the DOM gets updated
+   * Make the output be true
   */
 	nextTick(() => {
     console.log(+document.getElementById("counter").textContent === 1)

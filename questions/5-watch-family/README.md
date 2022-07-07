@@ -1,7 +1,7 @@
-<!--info-header-start--><h1>watch family <img src="https://img.shields.io/badge/-easy-7aad0c" alt="easy"/> <img src="https://img.shields.io/badge/-%23Composition%20API-999" alt="#Composition API"/> <img src="https://img.shields.io/badge/-%23Reactivity%3ACore-999" alt="#Reactivity:Core"/></h1><blockquote><p>By webfansplz <a href="https://github.com/webfansplz" target="_blank">@webfansplz</a></p></blockquote><p><a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cCBsYW5nPVwidHNcIj5cbmltcG9ydCB7IHJlZiwgd2F0Y2ggfSBmcm9tIFwidnVlXCJcblxuY29uc3QgY291bnQgPSByZWYoMClcblxuLyoqXG4gKiBDaGFsbGVuZ2VzIDE6IFdhdGNoIG9uY2VcbiAqIE1ha2Ugc3VyZSB0aGUgd2F0Y2ggY2FsbGJhY2sgb25seSB0cmlnZ2VyIG9uY2VcbiovXG53YXRjaChjb3VudCwgKCkgPT4ge1xuICBjb25zb2xlLmxvZyhcIk9ubHkgdHJpZ2dlcmVkIG9uY2VcIilcbn0pXG5cbmNvdW50LnZhbHVlID0gMVxuc2V0VGltZW91dCgoKSA9PiBjb3VudC52YWx1ZSA9IDIpXG5cbi8qKlxuICogQ2hhbGxlbmdlcyAyOiBXYXRjaCBvYmplY3RcbiAqIE1ha2Ugc3VyZSB0aGUgd2F0Y2ggY2FsbGJhY2sgdHJpZ2dlcmVkXG4qL1xuY29uc3Qgc3RhdGUgPSByZWYoe1xuICBjb3VudDogMCxcbn0pXG5cbndhdGNoKHN0YXRlLCAoKSA9PiB7XG4gIGNvbnNvbGUubG9nKFwiVGhlIHN0YXRlLmNvdW50IHVwZGF0ZWRcIilcbn0pXG5cbnN0YXRlLnZhbHVlLmNvdW50ID0gMlxuXG4vKipcbiAqIENoYWxsZW5nZXMgMzogQ2FsbGJhY2sgRmx1c2ggVGltaW5nXG4gKiBNYWtlIHN1cmUgdmlzaXRlZCB0aGUgdXBkYXRlZCBlbGVSZWZcbiovXG5cbmNvbnN0IGVsZVJlZiA9IHJlZigpXG5jb25zdCBhZ2UgPSByZWYoMilcbndhdGNoKGFnZSwgKCkgPT4ge1xuICBjb25zb2xlLmxvZyhlbGVSZWYudmFsdWUpXG59KVxuYWdlLnZhbHVlID0gMThcblxuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cbiAgPGRpdj5cbiAgICA8cD5cbiAgICAgIHt7IGNvdW50IH19XG4gICAgPC9wPlxuICAgIDxwIHJlZj1cImVsZVJlZlwiPlxuICAgICAge3sgYWdlIH19XG4gICAgPC9wPlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG4ifQ==" target="_blank"><img src="https://img.shields.io/badge/-Take%20the%20Challenge-213547?logo=vue.js&logoColor=42b883" alt="Take the Challenge"/></a> &nbsp;&nbsp;&nbsp;<a href="./README.zh-CN.md" target="_blank"><img src="https://img.shields.io/badge/-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-gray" alt="简体中文"/></a> </p><!--info-header-end-->
+<!--info-header-start--><h1>watch family <img src="https://img.shields.io/badge/-easy-7aad0c" alt="easy"/> <img src="https://img.shields.io/badge/-%23Composition%20API-999" alt="#Composition API"/> <img src="https://img.shields.io/badge/-%23Reactivity%3ACore-999" alt="#Reactivity:Core"/></h1><blockquote><p>By webfansplz <a href="https://github.com/webfansplz" target="_blank">@webfansplz</a></p></blockquote><p><a href="https://sfc.vuejs.org/#eNqFk11rwjAUhv/KIVdVxKq7GVKFIexuDIawm9zUeqyZMQ1N6hil/30nH1Unc7tLTt6T933y0bInrcenBtmcZaaohbZg0DYaZK7KBWfWcLbkShx1VVtoocbdCD5zW+yhg11dHYEzaueMK66KShkLRdUoCwsnTSYDV0+HQ65gCKt9LiWqEmE6h3e/SaUK9Gsv+QHBNDWC3WN0KEi+yYsDqeQX2FqUJdYm9gxTrrws8YYjSAawWEJLu1EEZSqJY1mVCWevV924De2MgnU+nO8en3LZIIWeckX8a3HEqrFJ2PKnYnYHaXZG2nxgYf+HEuYSKuCE8zM2t87InV+kIf85TEZ95IDtdX9gr8nSa8bhRhq9pcn2Cj2serCoIbzf6R7msOqDP8vG7IHOSKjyBvMkjCAPjxv9ACW+4S4Q9oyhFiEpS6jmZBRK7pADJdXuMoZdAkCEIvnlLh+dYZaGd02vmCYWj1pSLJoBZFtx8gMa6jgAaNv4hLsurqX9YqZdOvoWkcl9jXOTS3/bkqXBIkuvjFn3DXXSKT8=" target="_blank"><img src="https://img.shields.io/badge/-Take%20the%20Challenge-213547?logo=vue.js&logoColor=42b883" alt="Take the Challenge"/></a> &nbsp;&nbsp;&nbsp;<a href="./README.zh-CN.md" target="_blank"><img src="https://img.shields.io/badge/-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-gray" alt="简体中文"/></a> </p><!--info-header-end-->
 
 
-For this challenge, you'll use `Reactivity API: watch` to finish it. 
+For this challenge, you'll use `Reactivity API: watch` to complete the challenge. 
 Here's what you need to implement 👇: 
 
 ```vue
@@ -11,8 +11,8 @@ import { ref, watch } from "vue"
 const count = ref(0)
 
 /**
- * Challenges 1: Watch once
- * Make sure the watch callback only trigger once
+ * Challenge 1: Watch once
+ * Make sure the watch callback is only triggered once
 */
 watch(count, () => {
   console.log("Only triggered once")
@@ -23,7 +23,7 @@ setTimeout(() => count.value = 2)
 
 /**
  * Challenges 2: Watch object
- * Make sure the watch callback triggered
+ * Make sure the watch callback is triggered
 */
 const state = ref({
   count: 0,
@@ -36,7 +36,7 @@ watch(state, () => {
 state.value.count = 2
 
 /**
- * Challenges 3: Callback Flush Timing
+ * Challenge 3: Callback Flush Timing
  * Make sure visited the updated eleRef
 */
 
