@@ -546,7 +546,7 @@
       }
     },
     {
-      "path": "243-prevent event propagation",
+      "path": "243-prevent-event-propagation",
       "quizLink": "https://sfc.vuejs.org/#eNqFjtEKgyAYRl/lw5vqpliXw2J7D2/CScRMJa2b6N2nuWSMoAtB/uPxPyt5GlMusyB3Qi2fBuNghZsNZKf6hhFnGWnZxFQ4XCvrwOXA3zc0yAs0LdZAgMC0FKXUfZ7FJ1kR0HZi19d2/WfTKualGOrEaGTnxD4B6GtY8Nhd3x0L8uJbj1Ne/3IfEWYYxSFU3jg+T3dapb1k+wCXbmrQ",
       "no": 243,
       "readme": {
@@ -1069,7 +1069,7 @@
         }
       },
       {
-        "path": "243-prevent event propagation",
+        "path": "243-prevent-event-propagation",
         "quizLink": "https://sfc.vuejs.org/#eNqFjtEKgyAYRl/lw5vqpliXw2J7D2/CScRMJa2b6N2nuWSMoAtB/uPxPyt5GlMusyB3Qi2fBuNghZsNZKf6hhFnGWnZxFQ4XCvrwOXA3zc0yAs0LdZAgMC0FKXUfZ7FJ1kR0HZi19d2/WfTKualGOrEaGTnxD4B6GtY8Nhd3x0L8uJbj1Ne/3IfEWYYxSFU3jg+T3dapb1k+wCXbmrQ",
         "no": 243,
         "readme": {
