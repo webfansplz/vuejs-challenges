@@ -3,6 +3,7 @@ import path from "path"
 export const QUIZ_ROOT = path.resolve(__dirname, "../questions")
 export const VUE_SFC_PLAYGROUND_URL = "https://sfc.vuejs.org/"
 export const REPO = "https://github.com/webfansplz/vuejs-challenges"
+export const CODESANDBOX_URL = "https://codesandbox.io/"
 
 export const DIFFICULTY_COLORS: Record<string, string> = {
   warm: "teal",

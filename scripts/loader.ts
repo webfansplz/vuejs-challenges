@@ -6,6 +6,7 @@ import { serialize } from "./utils"
 import { QUIZ_ROOT, VUE_SFC_PLAYGROUND_URL } from "./configs"
 import type { QuizMetaInfo, Quiz } from "./types"
 import { supportedLocales, defaultLocale, f } from "./locales"
+import { normalizeCodesandboxLink } from "./codesandbox"
 
 export async function loadFile(filepath: string) {
   if (fs.existsSync(filepath))
@@ -74,12 +75,15 @@ export async function loadQuiz(dir: string): Promise<Quiz> {
   )
 
   const quizLink = normalizeSFCLink(content.reduce((pre, cur) => ({ ...pre, ...cur }), {}))
+  const codesandboxLink = normalizeCodesandboxLink(content.reduce((pre, cur) => ({ ...pre, ...cur }), {}))
+
   const readmePath = path.join(QUIZ_ROOT, dir, "README.md")
   const infoPath = path.join(QUIZ_ROOT, dir, "info.yml")
 
   return {
     path: dir,
     quizLink,
+    codesandboxLink,
     no: Number(dir.replace(/^(\d+)-.*/, "$1")),
     readme: await loadLocaleVariations(readmePath, cleanUpREADME),
     info: await loadLocaleVariations(infoPath, loadInfo),

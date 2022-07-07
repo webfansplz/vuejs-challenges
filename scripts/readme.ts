@@ -81,6 +81,7 @@ async function insertInfoToREADME(filepath: string, quiz: Quiz, locale: Supporte
       + `<blockquote><p>${generateAuthorInfo(info.author)}</p></blockquote>`
       + "<p>"
       + generateBadgeLink(quiz.quizLink, "", t(locale, "badge.take-the-challenge"), "213547", "?logo=vue.js&logoColor=42b883")
+      + generateBadgeLink(quiz.codesandboxLink, "", t(locale, "badge.take-the-challenge"), "213547", "?logo=CodeSandbox&logoColor=0b71f1")
       + (availableLocales.length ? ("&nbsp;&nbsp;&nbsp;" + availableLocales.map(l => generateBadgeLink(getNearborREADME(quiz, l), "", t(l, "display"), "gray")).join(" ")) : "")
       + "</p>"
       + "<!--info-header-end-->",

@@ -15,6 +15,7 @@ export interface QuizMetaInfo {
 export interface Quiz {
   no: number
   quizLink: string
+  codesandboxLink: string
   path: string
   readme: Record<string, string>
   info: Partial<QuizMetaInfo> | undefined

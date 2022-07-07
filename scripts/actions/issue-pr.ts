@@ -7,6 +7,7 @@ import { normalizeSFCLink } from "../loader"
 import { resolveFilePath } from "../utils"
 import { generateBadgeLink } from "../badge"
 import { t } from "../locales"
+import { normalizeCodesandboxLink } from "../codesandbox"
 
 const Messages = {
   "en": {
@@ -103,6 +104,7 @@ const action: Action = async(github, context, core) => {
         [anotherLocale]: `<!--info-header-start-->\n<!--info-header-end-->\n${normalizedTemplate}\n<!--info-footer-start-->\n<!--info-footer-end-->\n`,
       },
       quizLink: normalizeSFCLink(question),
+      codesandboxLink: normalizeCodesandboxLink(question)
     }
 
     core.info("-----Parsed-----")
@@ -170,11 +172,20 @@ const action: Action = async(github, context, core) => {
       "?logo=typescript&logoColor=white",
     )
 
+    const codesandboxPlaygroundBadge = generateBadgeLink(
+      quiz.codesandboxLink,
+      "",
+      t(locale, "badge.preview-playground"),
+      "3178c6",
+      "?logo=CodeSandbox&logoColor=0b71f1",
+    )
+
+
     const createMessageBody = (prNumber: number) =>
       `${Messages[locale].issue_update_reply.replace(
         "{0}",
         prNumber.toString(),
-      )}\n\n${getTimestampBadge()}  ${playgroundBadge}`
+      )}\n\n${getTimestampBadge()}  ${playgroundBadge}  ${codesandboxPlaygroundBadge}`
 
     if (existing_pull) {
       core.info("-----Pull Request Existed-----")
