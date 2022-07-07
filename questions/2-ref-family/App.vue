@@ -23,7 +23,7 @@ console.log(
 */
 function initialCount(value: number | Ref<number>) {
   // Make the output be true
-  console.log(value === 10)
+  console.log(unref(value) === 10)
 }
 
 initialCount(initial)
