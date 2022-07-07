@@ -35,7 +35,7 @@ export const getOthers = <A, B>(condition: boolean, a: A, b: B): A | B => condit
 const action: Action = async(github, context, core) => {
   const payload = context.payload || {}
   const issue = payload.issue
-  const no = context.issue.number + 100
+  const no = context.issue.number
 
   if (!issue) return
 
@@ -187,7 +187,7 @@ const action: Action = async(github, context, core) => {
     }
     else {
       core.info("-----Creating PR-----")
-      const normalizedNo = no - 100
+      const normalizedNo = no
       const { data: pr } = await github.pulls.create({
         owner: context.repo.owner,
         repo: context.repo.repo,

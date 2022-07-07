@@ -25,6 +25,10 @@
       "link": "/challenges#category=Directives"
     },
     {
+      "text": "Event Handling",
+      "link": "/challenges#category=Event%20Handling"
+    },
+    {
       "text": "Global API:General",
       "link": "/challenges#category=Global%20API%3AGeneral"
     },
@@ -88,8 +92,20 @@
           "link": "/questions/13-dom-portal/README"
         },
         {
+          "text": "Prop Validation",
+          "link": "/questions/323-prop-validation/README"
+        },
+        {
           "text": "functional component",
           "link": "/questions/21-functional-component/README"
+        },
+        {
+          "text": "render function[h()]",
+          "link": "/questions/218-h-render-function/README"
+        },
+        {
+          "text": "Tree Component",
+          "link": "/questions/208-tree-component/README"
         }
       ]
     },
@@ -159,6 +175,10 @@
       "text": "Directives",
       "items": [
         {
+          "text": "Capitalize",
+          "link": "/questions/305-capitalize/README"
+        },
+        {
           "text": "Optimize performance directive",
           "link": "/questions/12-optimize-perf-directive/README"
         },
@@ -177,6 +197,19 @@
         {
           "text": "v-model",
           "link": "/questions/26-v-model/README"
+        }
+      ]
+    },
+    {
+      "text": "Event Handling",
+      "items": [
+        {
+          "text": "prevent event propagation",
+          "link": "/questions/243-prevent event propagation/README"
+        },
+        {
+          "text": "Key Modifiers",
+          "link": "/questions/232-key-modifiers/README"
         }
       ]
     },

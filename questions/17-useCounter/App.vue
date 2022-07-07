@@ -7,7 +7,7 @@ interface UseCounterOptions {
 
 /**
  * Implement the composable function
- * Make the function work fine
+ * Make sure the function works correctly
 */
 function useCounter(initialValue = 0, options: UseCounterOptions = {}) {
 	const count = ref(initialValue);

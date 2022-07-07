@@ -10,8 +10,8 @@ const plusOne = computed({
 })
 
 /**
- * Make the `plusOne` can be written.
- * So we'll get the result is `plusOne` to be 3, and `count` to be 2.
+ * Make the `plusOne` writable.
+ * So that we can get the result `plusOne` to be 3, and `count` to be 2.
 */
 
 plusOne.value++

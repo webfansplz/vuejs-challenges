@@ -4,8 +4,8 @@ import { ref, watch } from "vue"
 const count = ref(0)
 
 /**
- * Challenges 1: Watch once
- * Make sure the watch callback only trigger once
+ * Challenge 1: Watch once
+ * Make sure the watch callback only triggers once
 */
 const unwatch = watch(count, () => {
   console.log("Only triggered once")
@@ -16,8 +16,8 @@ count.value = 1
 setTimeout(() => count.value = 2)
 
 /**
- * Challenges 2: Watch object
- * Make sure the watch callback triggered
+ * Challenge 2: Watch object
+ * Make sure the watch callback is triggered
 */
 const state = ref({
   count: 0,
@@ -30,7 +30,7 @@ watch(state.value, () => {
 state.value.count = 2
 
 /**
- * Challenges 3: Callback Flush Timing
+ * Challenge 3: Callback Flush Timing
  * Make sure visited the updated eleRef
 */
 

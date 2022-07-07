@@ -1,9 +1,11 @@
+import { zlibSync, strToU8, strFromU8 } from "fflate"
 import { defaultLocale } from "./locales"
 
-// prefer old unicode hacks for backward compatibility
-// https://base64.guru/developers/javascript/examples/unicode-strings
 export function utoa(data: string): string {
-  return btoa(unescape(encodeURIComponent(data)))
+  const buffer = strToU8(data)
+  const zipped = zlibSync(buffer, { level: 9 })
+  const binary = strFromU8(zipped, true)
+  return btoa(binary)
 }
 
 export function serialize(files) {

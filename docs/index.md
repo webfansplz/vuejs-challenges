@@ -20,7 +20,7 @@ hero:
       text: Challenges
       link: /challenges
     - theme: alt
-      text: View on Gitlab
+      text: View on Github
       link: https://github.com/webfansplz/vuejs-challenges
 
 features:
