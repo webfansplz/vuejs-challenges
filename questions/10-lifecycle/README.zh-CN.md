@@ -15,7 +15,7 @@ const count = inject('count')
 
 
 onMounted(() => {
-  // 切换子组件时, 定时器将不正常工作, 让我们来修复它 . 
+  // 切换子组件时, 定时器将不正常工作, 让我们来修复它。我们的目标是在子组件隐藏时暂停定时器。
   timer.value = window.setInterval(() => {
     count.value++
   }, 1000)

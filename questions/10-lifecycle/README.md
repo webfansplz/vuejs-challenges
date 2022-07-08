@@ -15,7 +15,7 @@ const count = inject('count')
 
 
 onMounted(() => {
-  // The timer will work abnormally when the child component is toggled. Lets fix it.
+  // The timer will work abnormally when the child component is toggled. Lets fix it. Our goal is to pause the timer when the child component is hidden.
   timer.value = window.setInterval(() => {
     count.value++
   }, 1000)
