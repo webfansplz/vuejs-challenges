@@ -83,12 +83,12 @@ export async function loadQuiz(dir: string): Promise<Quiz> {
 
   const normalizedFiles = content.reduce((a, b) => ({ ...a, ...b }), {})
   const hasTests = Object.keys(normalizedFiles).some(item => item.includes(".test.ts"))
-  const testFileName = (Object.keys(normalizedFiles).find(item => item.includes(".test.ts")) ?? "")
+  // const testFileName = (Object.keys(normalizedFiles).find(item => item.includes(".test.ts")) ?? "")
   const stackblitzLinkEN = hasTests
     ? normalizeStackBlitzLink({
       title: (info!.en!.title as unknown as string),
       files: normalizedFiles,
-      openFile: testFileName,
+      openFile: "App.vue",
     })
     : ""
 
@@ -96,7 +96,7 @@ export async function loadQuiz(dir: string): Promise<Quiz> {
     ? normalizeStackBlitzLink({
       title: (info!["zh-CN"]!.title as unknown as string),
       files: normalizedFiles,
-      openFile: testFileName,
+      openFile: "App.vue",
     })
     : ""
 
