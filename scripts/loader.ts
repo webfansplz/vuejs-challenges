@@ -88,7 +88,7 @@ export async function loadQuiz(dir: string): Promise<Quiz> {
     ? normalizeStackBlitzLink({
       title: (info!.en!.title as unknown as string),
       files: normalizedFiles,
-      openFile: 'App.vue',
+      openFile: "App.vue",
     })
     : ""
 
@@ -96,7 +96,7 @@ export async function loadQuiz(dir: string): Promise<Quiz> {
     ? normalizeStackBlitzLink({
       title: (info!["zh-CN"]!.title as unknown as string),
       files: normalizedFiles,
-      openFile: 'App.vue',
+      openFile: "App.vue",
     })
     : ""
 

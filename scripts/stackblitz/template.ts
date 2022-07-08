@@ -34,7 +34,8 @@ export default defineConfig({
   plugins: [
     vue(),
     Inspector({
-      enabled: true,
+      enabled: false,
+      toggleButtonVisibility: 'never'
     }),
   ],
 });

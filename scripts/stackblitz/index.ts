@@ -1,5 +1,5 @@
-import { STACKBLITZ_PLAYGROUND_URL } from "../scripts/configs"
-import stackblizContent from "../scripts/stackblizContent"
+import { STACKBLITZ_PLAYGROUND_URL } from "../configs"
+import template from "./template"
 export interface StackBlitzPayloadOptions {
   title: string
   files: Record<string, string>
@@ -10,11 +10,11 @@ export function normalizePayload(payload: StackBlitzPayloadOptions) {
   return {
     openFile: payload.openFile,
     files: {
-      "package.json": stackblizContent.packageJSONContent,
-      "vite.config.ts": stackblizContent.viteConfigContenet,
-      "main.ts": stackblizContent.mainTsContent,
-      "index.html": stackblizContent.indexHtmlContent,
-      "env.d.ts": stackblizContent.envTsContent,
+      "package.json": template.packageJSONContent,
+      "vite.config.ts": template.viteConfigContenet,
+      "main.ts": template.mainTsContent,
+      "index.html": template.indexHtmlContent,
+      "env.d.ts": template.envTsContent,
       ...payload.files,
     },
     title: payload.title,
