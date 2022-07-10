@@ -1,3 +1,6 @@
+
+import { lock } from "./package-lock"
+
 const packageJSONContent = JSON.stringify({
   scripts: {
     "test": "vitest --environment jsdom",
@@ -80,4 +83,5 @@ export default {
   mainTsContent,
   indexHtmlContent,
   envTsContent,
+  lock,
 }

@@ -11,6 +11,7 @@ export function normalizePayload(payload: StackBlitzPayloadOptions) {
     openFile: payload.openFile,
     files: {
       "package.json": template.packageJSONContent,
+      "package-lock.json": template.lock,
       "vite.config.ts": template.viteConfigContenet,
       "main.ts": template.mainTsContent,
       "index.html": template.indexHtmlContent,
