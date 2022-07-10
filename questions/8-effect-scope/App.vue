@@ -7,7 +7,7 @@ const doubled = computed(() => counter.value * 2)
 // use the `effectScope` API to make these effects stop together after being triggered once
 
 watch(doubled, () => console.log(doubled.value))
-watchEffect(() => console.log("Count: ", doubled.value))
+watchEffect(() => console.log(`Count: ${doubled.value}`))
 
 counter.value = 2
 
