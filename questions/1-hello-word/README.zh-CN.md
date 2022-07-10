@@ -2,7 +2,7 @@
 
 Hello，World！
 
-在这个挑战中，我们使用基于 [vuejs/repl](https://github.com/vuejs/repl) 的`SFC`编码游乐场进行在线编码。
+在这个挑战中，我们使用基于 [vuejs/repl](https://github.com/vuejs/repl) 的`SFC`编码游乐场进行在线编码且通过`StackBlitz` 和 [Vitest](https://github.com/vitest-dev/vitest)进行挑战判断。
 
 对于这个挑战，您将需要更改以下代码，以使页面正确显示“Hello World”。
 
