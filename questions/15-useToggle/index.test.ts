@@ -1,11 +1,11 @@
 import { mount } from "@vue/test-utils"
 import { describe, it, expect } from "vitest"
 
-import UseToggle from "./App.vue"
+import App from "./App.vue"
 
 describe("useToggle", () => {
   it("toggle state", async() => {
-    const wrapper = mount(UseToggle)
+    const wrapper = mount(App)
     const p1 = wrapper.findAll("p")[0]
     const p2 = wrapper.findAll("p")[1]
     expect(p1.text()).toBe("State: OFF")
