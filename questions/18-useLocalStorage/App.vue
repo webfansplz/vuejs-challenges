@@ -19,6 +19,13 @@ console.log(counter.value)
 
 // And we can also set localStorage by triggering the setter:
 
-counter.value = 1
+const update = () => counter.value++
 
 </script>
+
+<template>
+  <p>Counter: {{ counter }}</p>
+  <button @click="update">
+    Update
+  </button>
+</template>
