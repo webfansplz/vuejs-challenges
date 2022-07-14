@@ -6,33 +6,33 @@ import MyButton from "./MyButton"
 describe("Render function h()", () => {
   it("renders a 'MyButton'", () => {
     const wrapper = mount(MyButton)
-    expect(wrapper.element.tagName.toLocaleLowerCase()).toBe('button')
+    expect(wrapper.element.tagName.toLocaleLowerCase()).toBe("button")
   })
 
-  it("disabled", async () => {
+  it("disabled", async() => {
     const wrapper = mount(MyButton, {
       props: {
-        disabled: true
-      }
+        disabled: true,
+      },
     })
-    expect(wrapper.find('button').attributes()).toBeDefined()
-    
-    await wrapper.trigger('click')
-    expect(wrapper.emitted('click')).toBeUndefined()
+    expect(wrapper.find("button").attributes()).toBeDefined()
+
+    await wrapper.trigger("click")
+    expect(wrapper.emitted("click")).toBeUndefined()
   })
 
   it("slot", () => {
     const wrapper = mount(MyButton, {
       slots: {
-        default: 'my button'
-      }
+        default: "my button",
+      },
     })
-    expect(wrapper.text()).toBe('my button')
+    expect(wrapper.text()).toBe("my button")
   })
 
-  it('custom click defined', () => {
+  it("custom click defined", () => {
     const wrapper = mount(MyButton)
-    wrapper.trigger('click')
-    expect(wrapper.emitted().customClick || wrapper.emitted()['custom-click']).toBeDefined()
+    wrapper.trigger("click")
+    expect(wrapper.emitted().customClick || wrapper.emitted()["custom-click"]).toBeTruthy()
   })
 })
