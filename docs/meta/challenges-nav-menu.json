@@ -187,8 +187,8 @@
           "link": "/questions/19-v-focus/README"
         },
         {
-          "text": "v-debounce-click",
-          "link": "/questions/20-v-debounce-click/README"
+          "text": "v-throttle-click",
+          "link": "/questions/20-v-throttle-click/README"
         },
         {
           "text": "v-active-style",

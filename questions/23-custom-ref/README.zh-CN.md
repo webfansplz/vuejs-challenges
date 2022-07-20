@@ -12,10 +12,10 @@ import { watch } from "vue"
 /**
  * 补全以下函数来实现防抖ref :
 */
-function useDebouncedRef(value, delay = 200) {
+function useThrottledRef(value, delay = 200) {
 
 }
-const text = useDebouncedRef("hello")
+const text = useThrottledRef("hello")
 
 /**
  * 确保在输入框快速输入时, 只触发一次回调。

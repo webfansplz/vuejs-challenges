@@ -9,7 +9,7 @@ async function triggerClick(target: DOMWrapper<HTMLButtonElement>, times = 1) {
     await target.trigger("click")
 }
 
-describe("v-debounce-click", () => {
+describe("v-throttle-click", () => {
   it("should work", async() => {
     const result: string[] = []
     console.log = vi.fn((log: string) => {
