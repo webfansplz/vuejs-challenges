@@ -540,7 +540,7 @@
       "no": 23,
       "readme": {
         "en": "The `throttle function` is so useful in the input box manipulation scenarios.\n\nA `throttled ref` is even more flexible in `Vue.js`. Lets go 👇: \n\n```vue\n<script setup>\nimport { watch } from \"vue\"\n\n/**\n * Implement the function\n*/\nfunction useThrottledRef(value, delay = 200) {\n\n}\nconst text = useThrottledRef(\"hello\")\n\n/**\n * Make sure the callback only gets triggered once when entered multiple times in a certain timeout\n*/\nwatch(text, (value) => {\n  console.log(value)\n})\n</script>\n\n<template>\n  <input v-model=\"text\" />\n</template>\n\n```",
-        "zh-CN": "防抖函数在输入框操作场景中非常有用。\n\n一个 防抖的`ref`在`Vue.js`更加灵活，让我们开始吧 👇: \n\n```vue\n<script setup>\nimport { watch } from \"vue\"\n\n/**\n * 补全以下函数来实现防抖ref :\n*/\nfunction useThrottledRef(value, delay = 200) {\n\n}\nconst text = useThrottledRef(\"hello\")\n\n/**\n * 确保在输入框快速输入时, 只触发一次回调。\n*/\nwatch(text, (value) => {\n  console.log(value)\n})\n</script>\n\n<template>\n  <input v-model=\"text\" />\n</template>\n\n```"
+        "zh-CN": "节流函数在输入框操作场景中非常有用。\n\n一个 节流的`ref`在`Vue.js`更加灵活，让我们开始吧 👇: \n\n```vue\n<script setup>\nimport { watch } from \"vue\"\n\n/**\n * 补全以下函数来实现节流ref :\n*/\nfunction useThrottledRef(value, delay = 200) {\n\n}\nconst text = useThrottledRef(\"hello\")\n\n/**\n * 确保在输入框快速输入时, 只触发一次回调。\n*/\nwatch(text, (value) => {\n  console.log(value)\n})\n</script>\n\n<template>\n  <input v-model=\"text\" />\n</template>\n\n```"
       },
       "info": {
         "en": {
@@ -1994,7 +1994,7 @@
         "no": 23,
         "readme": {
           "en": "The `throttle function` is so useful in the input box manipulation scenarios.\n\nA `throttled ref` is even more flexible in `Vue.js`. Lets go 👇: \n\n```vue\n<script setup>\nimport { watch } from \"vue\"\n\n/**\n * Implement the function\n*/\nfunction useThrottledRef(value, delay = 200) {\n\n}\nconst text = useThrottledRef(\"hello\")\n\n/**\n * Make sure the callback only gets triggered once when entered multiple times in a certain timeout\n*/\nwatch(text, (value) => {\n  console.log(value)\n})\n</script>\n\n<template>\n  <input v-model=\"text\" />\n</template>\n\n```",
-          "zh-CN": "防抖函数在输入框操作场景中非常有用。\n\n一个 防抖的`ref`在`Vue.js`更加灵活，让我们开始吧 👇: \n\n```vue\n<script setup>\nimport { watch } from \"vue\"\n\n/**\n * 补全以下函数来实现防抖ref :\n*/\nfunction useThrottledRef(value, delay = 200) {\n\n}\nconst text = useThrottledRef(\"hello\")\n\n/**\n * 确保在输入框快速输入时, 只触发一次回调。\n*/\nwatch(text, (value) => {\n  console.log(value)\n})\n</script>\n\n<template>\n  <input v-model=\"text\" />\n</template>\n\n```"
+          "zh-CN": "节流函数在输入框操作场景中非常有用。\n\n一个 节流的`ref`在`Vue.js`更加灵活，让我们开始吧 👇: \n\n```vue\n<script setup>\nimport { watch } from \"vue\"\n\n/**\n * 补全以下函数来实现节流ref :\n*/\nfunction useThrottledRef(value, delay = 200) {\n\n}\nconst text = useThrottledRef(\"hello\")\n\n/**\n * 确保在输入框快速输入时, 只触发一次回调。\n*/\nwatch(text, (value) => {\n  console.log(value)\n})\n</script>\n\n<template>\n  <input v-model=\"text\" />\n</template>\n\n```"
         },
         "info": {
           "en": {
