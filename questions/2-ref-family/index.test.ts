@@ -22,9 +22,11 @@ describe("RefFamily", () => {
   })
 
   it("Unwrap ref", () => {
-    const wrapper = mount(RefFamily)
-    expect((wrapper.vm as unknown as RefFamilyType).initialCount(996)).toMatchInlineSnapshot("996")
-    expect((wrapper.vm as unknown as RefFamilyType).initialCount(ref(996))).toMatchInlineSnapshot("996")
+    const wrapper = mount(RefFamily);
+    (wrapper.vm as unknown as RefFamilyType).initialCount(996)
+    expect((wrapper.vm as unknown as RefFamilyType).initial).toMatchInlineSnapshot("996");
+    (wrapper.vm as unknown as RefFamilyType).initialCount(ref(996))
+    expect((wrapper.vm as unknown as RefFamilyType).initial).toMatchInlineSnapshot("996");
   })
 
   it("create a ref for a property on a source reactive object", () => {
