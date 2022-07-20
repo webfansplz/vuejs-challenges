@@ -381,7 +381,7 @@
       "no": 20,
       "readme": {
         "en": "For this challenge, we're going to implement a debounced-click-directive. Lets go 👇: \n\n```vue\n<script setup lang='ts'>\n\n/**\n  * Implement the custom directive\n * Make sure the `onClick` method only gets triggered once when clicked many times quickly\n * And you also need to support the debounce delay time option. e.g `v-debounce-click:ms`\n *\n*/\n\nconst VDebounceClick = {\n\n}\n\nfunction onClick() {\n  console.log(\"Only triggered once when clicked many times quickly\")\n}\n\n</script>\n\n<template>\n  <button v-debounce-click:200=\"onClick\">\n    Click on it many times quickly\n  </button>\n</template>\n\n```",
-        "zh-CN": "在这个挑战中，我们将尝试实现一个防抖点击指令，让我们开始吧 👇:\n\n```vue\n<script setup lang='ts'>\n\n/**\n * 实现以下自定义指令\n * 确保在一定时间内当快速点击按钮多次时只触发一次点击事件\n * 你需要支持防抖延迟时间选项, 用法如 `v-debounce-click:ms`\n *\n*/\n\nconst VDebounceClick = {\n\n}\n\nfunction onClick() {\n  console.log(\"Only triggered once when clicked many times quicky\")\n}\n\n</script>\n\n<template>\n  <button v-debounce-click:200=\"onClick\">\n    Click on it many times quickly\n  </button>\n</template>\n\n```"
+        "zh-CN": "在这个挑战中，我们将尝试实现一个节流点击指令，让我们开始吧 👇:\n\n```vue\n<script setup lang='ts'>\n\n/**\n * 实现以下自定义指令\n * 确保在一定时间内当快速点击按钮多次时只触发一次点击事件\n * 你需要支持节流延迟时间选项, 用法如 `v-debounce-click:ms`\n *\n*/\n\nconst VDebounceClick = {\n\n}\n\nfunction onClick() {\n  console.log(\"Only triggered once when clicked many times quicky\")\n}\n\n</script>\n\n<template>\n  <button v-debounce-click:200=\"onClick\">\n    Click on it many times quickly\n  </button>\n</template>\n\n```"
       },
       "info": {
         "en": {
@@ -394,7 +394,7 @@
           "tags": "Directives"
         },
         "zh-CN": {
-          "title": "防抖点击指令",
+          "title": "节流点击指令",
           "author": {
             "name": "webfansplz",
             "github": "webfansplz"
@@ -1676,7 +1676,7 @@
         "no": 20,
         "readme": {
           "en": "For this challenge, we're going to implement a debounced-click-directive. Lets go 👇: \n\n```vue\n<script setup lang='ts'>\n\n/**\n  * Implement the custom directive\n * Make sure the `onClick` method only gets triggered once when clicked many times quickly\n * And you also need to support the debounce delay time option. e.g `v-debounce-click:ms`\n *\n*/\n\nconst VDebounceClick = {\n\n}\n\nfunction onClick() {\n  console.log(\"Only triggered once when clicked many times quickly\")\n}\n\n</script>\n\n<template>\n  <button v-debounce-click:200=\"onClick\">\n    Click on it many times quickly\n  </button>\n</template>\n\n```",
-          "zh-CN": "在这个挑战中，我们将尝试实现一个防抖点击指令，让我们开始吧 👇:\n\n```vue\n<script setup lang='ts'>\n\n/**\n * 实现以下自定义指令\n * 确保在一定时间内当快速点击按钮多次时只触发一次点击事件\n * 你需要支持防抖延迟时间选项, 用法如 `v-debounce-click:ms`\n *\n*/\n\nconst VDebounceClick = {\n\n}\n\nfunction onClick() {\n  console.log(\"Only triggered once when clicked many times quicky\")\n}\n\n</script>\n\n<template>\n  <button v-debounce-click:200=\"onClick\">\n    Click on it many times quickly\n  </button>\n</template>\n\n```"
+          "zh-CN": "在这个挑战中，我们将尝试实现一个节流点击指令，让我们开始吧 👇:\n\n```vue\n<script setup lang='ts'>\n\n/**\n * 实现以下自定义指令\n * 确保在一定时间内当快速点击按钮多次时只触发一次点击事件\n * 你需要支持节流延迟时间选项, 用法如 `v-debounce-click:ms`\n *\n*/\n\nconst VDebounceClick = {\n\n}\n\nfunction onClick() {\n  console.log(\"Only triggered once when clicked many times quicky\")\n}\n\n</script>\n\n<template>\n  <button v-debounce-click:200=\"onClick\">\n    Click on it many times quickly\n  </button>\n</template>\n\n```"
         },
         "info": {
           "en": {
@@ -1689,7 +1689,7 @@
             "tags": "Directives"
           },
           "zh-CN": {
-            "title": "防抖点击指令",
+            "title": "节流点击指令",
             "author": {
               "name": "webfansplz",
               "github": "webfansplz"
