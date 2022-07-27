@@ -45,6 +45,10 @@ Vue.js 挑战合集
 
 > 💡 尽管你可以使用中文进行讨论，我们还是鼓励你尝试使用英文发起 Issue 与评论，这样可以让你的问题被更多人看到也可以帮助更多人。
 
+## 📚 文章 
+
+[叮~您有一封Vue.js挑战邀请函,请查收](https://zhuanlan.zhihu.com/p/536857013)
+
 ## 🌸 感谢
 
 这个项目的灵感和实现大多来自于 [type-challenges](https://github.com/type-challenges/type-challenges) ♥️。
