@@ -10,12 +10,13 @@ async function triggerClick(target: DOMWrapper<HTMLButtonElement>, times = 1) {
 }
 
 describe("useCounter", () => {
-  let wrapper, incBtn, decBtn, text
+  let wrapper, incBtn, decBtn, resetBtn, text
 
   beforeEach(() => {
     wrapper = mount(App)
     incBtn = wrapper.findAll("button")[0]
     decBtn = wrapper.findAll("button")[1]
+    resetBtn = wrapper.findAll("button")[2]
     text = wrapper.find("p")
   })
 
@@ -32,6 +33,14 @@ describe("useCounter", () => {
     await triggerClick(incBtn, 15)
     expect(text.text()).toBe("Count: 10")
     await triggerClick(decBtn, 20)
+    expect(text.text()).toBe("Count: 0")
+  })
+
+  it('support reset', async() => {
+    expect(text.text()).toBe("Count: 0")
+    await triggerClick(incBtn, 3)
+    expect(text.text()).toBe("Count: 3")
+    await triggerClick(resetBtn)
     expect(text.text()).toBe("Count: 0")
   })
 })
