@@ -3,5 +3,16 @@
 
 Please validate the `type` prop of the `Button` component. it's accept the following strings `primary | ghost | dashed | link | text | default` only and the default value is `default`.
 
+```vue
+<script setup>
+defineProps({
+  type: {},
+})
+</script>
+
+<template>
+  <button>Button</button>
+</template>
+```
 
 <!--info-footer-start--><br><a href="../../README.md" target="_blank"><img src="https://img.shields.io/badge/-Back-grey" alt="Back"/></a> <a href="https://github.com/webfansplz/vuejs-challenges/issues/new?labels=answer,en&template=0-answer.md&title=323%20-%20Prop%20Validation" target="_blank"><img src="https://img.shields.io/badge/-Share%20your%20Solutions-teal" alt="Share your Solutions"/></a> <a href="https://github.com/webfansplz/vuejs-challenges/issues?q=label%3A323+label%3Aanswer" target="_blank"><img src="https://img.shields.io/badge/-Check%20out%20Solutions-de5a77?logo=awesome-lists&logoColor=white" alt="Check out Solutions"/></a> <!--info-footer-end-->
