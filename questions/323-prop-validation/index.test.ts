@@ -6,7 +6,6 @@ import Button from "./Button.vue"
 describe("prop-validation", () => {
   it("should have a default type prop of 'default'", () => {
     const wrapper = mount(Button)
-    console.log(wrapper.vm)
     expect(wrapper.vm.type).toBe("default")
   })
   it("should only accept specific values for the type prop", () => {
