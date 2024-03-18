@@ -15,9 +15,14 @@ describe("key modifiers", () => {
 
     await buttons[0].trigger('click')
     expect(printLog).toMatchInlineSnapshot('""')
+    printLog = ""
     await buttons[0].trigger('click.alt')
     expect(printLog).toMatchInlineSnapshot('"onClick1"')
+    printLog = ""
     await buttons[0].trigger('click.shift')
+    expect(printLog).toMatchInlineSnapshot('"onClick1"')
+    printLog = ""
+    await buttons[0].trigger('click.shift.alt')
     expect(printLog).toMatchInlineSnapshot('"onClick1"')
 
     await buttons[1].trigger('click')
