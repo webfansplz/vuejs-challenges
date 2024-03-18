@@ -13,6 +13,10 @@ const VOhModel = {
 
 const value = ref("Hello Vue.js")
 
+setTimeout(() => {
+  value.value = "Hello World!!!"
+},2000)
+
 </script>
 
 <template>
